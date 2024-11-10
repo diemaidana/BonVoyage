@@ -3,8 +3,8 @@ package progiipoo.bonvoyageapp.model.usuarios;
 import java.util.Objects;
 
 public abstract class Usuario {
-     private final String email;
-     private final String dni;
+     private String email;
+     private String dni;
      private String password;
      private String telefono;
      private String domicilio;
@@ -65,6 +65,14 @@ public abstract class Usuario {
 
     public String getPais() {
         return pais;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public void setPassword(String password) {
