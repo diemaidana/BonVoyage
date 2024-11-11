@@ -4,12 +4,12 @@ public class Paquete extends ElementoViaje {
     private int cantDias;
 
     // CONSTRUCTORES
+
     public Paquete() {
-        super();
         this.cantDias = 0;
     }
-    public Paquete(Double precio, String fechaRegreso, String fechaInicio, String destino, int cantDias) {
-        super(precio, fechaRegreso, fechaInicio, destino);
+    public Paquete(Double precio, String fechaRegreso, String fechaInicio, String ciudad, String provincia, String pais, int cantDias) {
+        super(precio, fechaRegreso, fechaInicio, ciudad, provincia, pais);
         this.cantDias = cantDias;
     }
     // SETTER

@@ -13,18 +13,18 @@ public class Alojamiento extends ElementoViaje {
     public Alojamiento() {
         super();
         this.cantDias = 0;
-        this.ubicacion = null;
         this.puntuacion = new ArrayList<>();
         this.desayuno = false;
     }
     // CONSTRUCTOR
-    public Alojamiento(Double precio, String fechaRegreso, String fechaInicio, String destino, int cantDias, String ubicacion, int puntuacion, boolean desayuno) {
-        super(precio, fechaRegreso, fechaInicio, destino);
+
+    public Alojamiento(Double precio, String fechaRegreso, String fechaInicio, String ciudad, String provincia, String pais, int cantDias, String ubicacion, ArrayList<Integer> puntuacion, boolean desayuno) {
+        super(precio, null, null, ciudad, provincia, pais);
         this.cantDias = cantDias;
-        this.ubicacion = ubicacion;
-        this.puntuacion = new ArrayList<>();
+        this.puntuacion = puntuacion;
         this.desayuno = desayuno;
     }
+
     // SETTERS
     public void setCantDias(int cantDias) {
         this.cantDias = cantDias;
