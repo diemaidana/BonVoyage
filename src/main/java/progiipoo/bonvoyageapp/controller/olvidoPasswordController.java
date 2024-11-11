@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class olvidoPassword {
+public class olvidoPasswordController {
     @FXML
     private Button btnCancelar;
 

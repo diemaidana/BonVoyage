@@ -1,5 +1,6 @@
 package progiipoo.bonvoyageapp.model.usuarios;
 
+import java.util.Iterator;
 import java.util.Objects;
 
 public abstract class Usuario {
@@ -110,5 +111,19 @@ public abstract class Usuario {
     @Override
     public int hashCode() {
         return Objects.hash(email, dni);
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "email='" + email + '\'' +
+                ", dni='" + dni + '\'' +
+                ", password='" + password + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", domicilio='" + domicilio + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", pais='" + pais + '\'' +
+                '}';
     }
 }

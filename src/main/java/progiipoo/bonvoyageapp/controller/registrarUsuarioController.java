@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import progiipoo.bonvoyageapp.HelloApplication;
+import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
 import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 
 import java.io.IOException;
@@ -96,6 +97,6 @@ public class registrarUsuarioController {
         c.setProvincia(txtProvincia.getText());
         c.setPais(txtPais.getText());
 
-        // LLAMAR A METODO DE GESTION DE USUARIOS Y REGISTRAR USUARIO
+        GestorUsuarios.agregarUsuario(c);
     }
 }
