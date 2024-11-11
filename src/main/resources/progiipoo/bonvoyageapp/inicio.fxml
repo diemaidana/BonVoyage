@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="700.0"
             prefWidth="400.0"
-            style="-fx-background-color:#e8dbcb;"
+            style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);"
             xmlns="http://javafx.com/javafx/23"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="progiipoo.bonvoyageapp.controller.inicioController">

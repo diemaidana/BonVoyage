@@ -30,15 +30,7 @@ public class inicioController {
 
     @FXML
     void onIniciarSesionClick(ActionEvent event) {
-        String email =  txtUsuario.getText();
-        String password = txtPassword.getText();
-        for (Usuario u : usuarios){
-            if(u.getEmail().equals(email)){
-                if(u.getPassword().equals(password)){
-                    // CARGAR NUEVA VISTA
-                }
-            }
-        }
+
         // INFORMAR QUE EMAIL O CONTRASENIA INCORRECTAS
     }
 
@@ -49,6 +41,7 @@ public class inicioController {
 
     @FXML
     void onRegistrarseClick(ActionEvent event) {
+
         // CREAR FORMULARIO DE REGISTRO
     }
 }

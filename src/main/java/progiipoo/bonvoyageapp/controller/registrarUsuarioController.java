@@ -4,12 +4,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import progiipoo.bonvoyageapp.HelloApplication;
 import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 
 public class registrarUsuarioController {
+    @FXML
+    private Button btnCancelar;
+
+    @FXML
+    private Button btnRegistrar;
+
     @FXML
     private Label lblCiudad;
 

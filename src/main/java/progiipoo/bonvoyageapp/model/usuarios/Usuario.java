@@ -104,11 +104,11 @@ public abstract class Usuario {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Usuario usuario = (Usuario) o;
-        return Objects.equals(email, usuario.email) && Objects.equals(dni, usuario.dni) && Objects.equals(password, usuario.password) && Objects.equals(telefono, usuario.telefono) && Objects.equals(domicilio, usuario.domicilio) && Objects.equals(ciudad, usuario.ciudad) && Objects.equals(provincia, usuario.provincia) && Objects.equals(pais, usuario.pais);
+        return Objects.equals(email, usuario.email) && Objects.equals(dni, usuario.dni);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(email, dni, password, telefono, domicilio, ciudad, provincia, pais);
+        return Objects.hash(email, dni);
     }
 }

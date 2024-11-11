@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #e8dbcb;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.registrarUsuarioController">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.registrarUsuarioController">
    <children>
       <GridPane prefHeight="600.0" prefWidth="600.0">
         <columnConstraints>
@@ -52,22 +51,22 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <TextField GridPane.columnIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <Label text="Email" GridPane.halignment="CENTER" />
-                        <Label text="Contraseña" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                        <Label text="DNI" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                        <Label text="Telefono" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                        <Label text="Domicilio" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-                        <Label text="Ciudad" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-                        <Label text="Provincia" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-                        <Label text="Pais" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtEmail" promptText="Ingresar email..." GridPane.columnIndex="1" />
+                        <TextField fx:id="txtPassword" promptText="Ingresar contraseña..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtDNI" promptText="Ingresar dni..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtTelefono" promptText="Ingresar telefono..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtDomicilio" promptText="Ingresar domicilio..." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtCiudad" promptText="Ingresar ciudad..." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtProvincia" promptText="Ingresar provincia..." GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtPais" promptText="Ingresar pais..." GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label fx:id="lblEmail" text="Email" GridPane.halignment="CENTER" />
+                        <Label fx:id="lblPassword" text="Contraseña" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Label fx:id="lblDNI" text="DNI" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Label fx:id="lblTelefono" text="Telefono" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                        <Label fx:id="lblDomicilio" text="Domicilio" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label fx:id="lblCiudad" text="Ciudad" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                        <Label fx:id="lblProvincia" text="Provincia" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                        <Label fx:id="lblPais" text="Pais" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
                   <GridPane maxHeight="55.0" maxWidth="601.0" minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="600.0" GridPane.rowIndex="1">
@@ -79,8 +78,8 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="200.0" text="Cancelar" GridPane.halignment="CENTER" />
-                        <Button mnemonicParsing="false" prefWidth="200.0" text="Registrar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onCancelarClick" prefWidth="200.0" text="Cancelar" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnRegistrar" mnemonicParsing="false" onAction="#onRegistrarClick" prefWidth="200.0" text="Registrar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                      </children>
                   </GridPane>
                </children>
