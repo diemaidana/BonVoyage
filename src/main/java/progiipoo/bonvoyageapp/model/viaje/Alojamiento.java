@@ -1,9 +1,12 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Alojamiento extends ElementoViaje {
     private int cantDias;
     private String ubicacion;
-    private int puntuacion;
+    private ArrayList<Integer> puntuacion;
     private boolean desayuno;
 
     // CONSTRUCTOR VACIO
@@ -11,7 +14,7 @@ public class Alojamiento extends ElementoViaje {
         super();
         this.cantDias = 0;
         this.ubicacion = null;
-        this.puntuacion = 0;
+        this.puntuacion = new ArrayList<>();
         this.desayuno = false;
     }
     // CONSTRUCTOR
@@ -19,7 +22,7 @@ public class Alojamiento extends ElementoViaje {
         super(precio, fechaRegreso, fechaInicio, destino);
         this.cantDias = cantDias;
         this.ubicacion = ubicacion;
-        this.puntuacion = puntuacion;
+        this.puntuacion = new ArrayList<>();
         this.desayuno = desayuno;
     }
     // SETTERS
@@ -29,8 +32,8 @@ public class Alojamiento extends ElementoViaje {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
+    public void setPuntuacion(Integer puntuacion) {
+        this.puntuacion.add(puntuacion) ;
     }
     public void setDesayuno(boolean desayuno) {
         this.desayuno = desayuno;
@@ -42,8 +45,12 @@ public class Alojamiento extends ElementoViaje {
     public String getUbicacion() {
         return ubicacion;
     }
-    public int getPuntuacion() {
-        return puntuacion;
+    public Integer getPuntuacion() {
+        Integer promedio = 0;
+        for(Integer i: this.puntuacion){
+            promedio += i;
+        }
+        return Math.round(promedio / puntuacion.size());
     }
     public boolean isDesayuno() {
         return desayuno;
