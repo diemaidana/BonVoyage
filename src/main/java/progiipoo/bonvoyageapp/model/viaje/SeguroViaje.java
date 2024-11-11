@@ -12,10 +12,10 @@ public class SeguroViaje extends ElementoViaje {
     }
 
     // CONSTRUCTOR
-    public SeguroViaje(Double precio, String fechaRegreso, String fechaInicio, String destino, String destinoContinente, int cantDias) {
-        super(precio, fechaRegreso, fechaInicio, destino);
-        this.destinoContinente = destinoContinente;
+    public SeguroViaje(Double precio, String fechaRegreso, String fechaInicio, String ciudad, String provincia, String pais, int cantDias, String destinoContinente) {
+        super(precio, fechaRegreso, fechaInicio, ciudad, provincia, pais);
         this.cantDias = cantDias;
+        this.destinoContinente = destinoContinente;
     }
 
     // SETTERS
