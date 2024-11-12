@@ -1,29 +1,29 @@
 package progiipoo.bonvoyageapp.model.gestores;
 
-import progiipoo.bonvoyageapp.model.contenedores.Contenedora;
+import progiipoo.bonvoyageapp.model.Contenedora;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 
-public class GestoraViaje {
-    private static Contenedora<ElementoViaje> paquete = new ContenedoraPaquete<>();
 
+public class GestoraViaje {
+    private static Contenedora<ElementoViaje> lista = new Contenedora<ElementoViaje>();
     public static void agregarAlojamiento(Alojamiento a) {
-        paquete.agregarElemento(a);
+        lista.agregarElemento(a);
     }
     public static void eliminarAlojamiento(Alojamiento a){
-        paquete.eliminarElemento(a);
+        lista.eliminarElemento(a);
     }
     public static void contieneElemento(Alojamiento a){
-        paquete.contieneElemento(a);
+        lista.contieneElemento(a);
     }
     public static void agregarSeguro(SeguroViaje sv) {
-        paquete.agregarElemento(sv);
+        lista.agregarElemento(sv);
     }
     public static void eliminarSeguro(SeguroViaje sv){
-        paquete.eliminarElemento(sv);
+        lista.eliminarElemento(sv);
     }
     public static void contieneElemento(SeguroViaje sv){
-        paquete.contieneElemento(sv);
+        lista.contieneElemento(sv);
     }
 }
