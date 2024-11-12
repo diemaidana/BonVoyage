@@ -6,6 +6,12 @@ import java.util.Iterator;
 public class Contenedora<T> implements Iterable<T>{
     private HashSet<T> lista;
 
+    public Contenedora(){
+        lista = new HashSet<>();
+    }
+    public void agregarElemento(T t){
+        lista.add(t);
+    }
     public void eliminarElemento(T t){
         lista.remove(t);
     }

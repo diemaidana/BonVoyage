@@ -7,7 +7,6 @@ import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 
 
 public class GestoraViaje {
-    /*
     private static Contenedora<ElementoViaje> lista = new Contenedora<ElementoViaje>();
     public static void agregarAlojamiento(Alojamiento a) {
         lista.agregarElemento(a);
@@ -27,5 +26,4 @@ public class GestoraViaje {
     public static void contieneElemento(SeguroViaje sv){
         lista.contieneElemento(sv);
     }
-    */
 }
