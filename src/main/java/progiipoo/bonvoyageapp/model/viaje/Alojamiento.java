@@ -30,6 +30,7 @@ public final class Alojamiento extends ElementoViaje {
         this.pais = pais;
         this.provincia = provincia;
     }
+    // TE VOY A AGREGAR UN COMENTARIO PARA PODER PUSHEAR
     // SETTERS
     public void setCantDias(int cantDias) {
         this.cantDias = cantDias;
