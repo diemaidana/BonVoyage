@@ -8,9 +8,9 @@ public final class Alojamiento extends ElementoViaje {
     private String ubicacion;
     private ArrayList<Integer> puntuacion;
     private boolean desayuno;
-    protected String ciudad;
-    protected String pais;
-    protected String provincia;
+    private String ciudad;
+    private String pais;
+    private String provincia;
 
     // CONSTRUCTOR VACIO
     public Alojamiento() {
@@ -20,11 +20,11 @@ public final class Alojamiento extends ElementoViaje {
         this.desayuno = false;
     }
     // CONSTRUCTOR
-    public Alojamiento(Double precio, int cantDias, String ubicacion, ArrayList<Integer> puntuacion, boolean desayuno, String ciudad, String pais, String provincia) {
+    public Alojamiento(Double precio, int cantDias, String ubicacion, boolean desayuno, String ciudad, String pais, String provincia) {
         super(precio);
         this.cantDias = cantDias;
         this.ubicacion = ubicacion;
-        this.puntuacion = puntuacion;
+        this.puntuacion = new ArrayList<>();
         this.desayuno = desayuno;
         this.ciudad = ciudad;
         this.pais = pais;
@@ -37,8 +37,8 @@ public final class Alojamiento extends ElementoViaje {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
-    public void setPuntuacion(ArrayList<Integer> puntuacion) {
-        this.puntuacion = puntuacion;
+    public void setPuntuacion(Integer puntuacion) {
+        this.puntuacion.add(puntuacion);
     }
     public void setDesayuno(boolean desayuno) {
         this.desayuno = desayuno;
@@ -53,38 +53,29 @@ public final class Alojamiento extends ElementoViaje {
         this.provincia = provincia;
     }
     // GETTERS
-
     public int getCantDias() {
         return cantDias;
     }
-
     public String getUbicacion() {
         return ubicacion;
     }
-
-    public ArrayList<Integer> getPuntuacion(Integer punto) {
-        puntuacion.add(punto);
-    }
-
     public boolean isDesayuno() {
         return desayuno;
     }
-
     public String getCiudad() {
         return ciudad;
     }
-
     public String getPais() {
         return pais;
     }
-
     public String getProvincia() {
         return provincia;
     }
     public Integer getPuntuacion() {
         Integer promedio = 0;
-        for(Integer i: this.puntuacion){
+        for (Integer i : this.puntuacion) {
             promedio += i;
         }
         return Math.round(promedio / puntuacion.size());
+    }
 }

@@ -15,9 +15,9 @@ public class crearAlojamiento {
     @FXML
     private Button btnCrear;
     @FXML
-    private CheckBox checkFalse;
+    private CheckBox btnFalse;
     @FXML
-    private CheckBox checkTrue;
+    private CheckBox btnTrue;
     @FXML
     private Label lblCiudad;
     @FXML
@@ -45,11 +45,11 @@ public class crearAlojamiento {
     void onCrearClick(ActionEvent event) {
         Alojamiento a  = new Alojamiento();
         a.setPrecio(Double.parseDouble(txtPrecio.getText()));
-        if(checkTrue.isSelected()){
-            a.setDesayuno(checkTrue.isSelected());
+        if(btnTrue.isSelected()){
+            a.setDesayuno(btnTrue.isSelected());
         }
         else{
-            a.setDesayuno(!checkFalse.isSelected());
+            a.setDesayuno(btnFalse.isSelected());
         }
         a.setCiudad(txtCiudad.getText());
         a.setProvincia(txtProvincia.getText());
