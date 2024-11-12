@@ -3,7 +3,7 @@ package progiipoo.bonvoyageapp.model.viaje;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Alojamiento extends ElementoViaje {
+public final class Alojamiento extends ElementoViaje {
     private int cantDias;
     private String ubicacion;
     private ArrayList<Integer> puntuacion;

@@ -2,7 +2,7 @@ package progiipoo.bonvoyageapp.model.viaje;
 
 import java.time.LocalDate;
 
-public class Vuelo {
+public final class Vuelo {
     private String origen;
     private String destino;
     private LocalDate fechaVuelo;

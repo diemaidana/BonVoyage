@@ -6,11 +6,6 @@ public class GestoraViaje {
     public static void crearAlojamiento() {
         Alojamiento alojamiento = new Alojamiento();
 
-        alojamiento.setCantDias();
-        alojamiento.setCiudad();
-        alojamiento.setProvincia();
-        alojamiento.setPais();
-        alojamiento.setPrecio();
-        alojamiento.setUbicacion();
+
     }
 }

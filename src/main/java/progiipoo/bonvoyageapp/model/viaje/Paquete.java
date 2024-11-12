@@ -1,6 +1,6 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
-public class Paquete extends ElementoViaje {
+public final class Paquete extends ElementoViaje {
     private int cantDias;
 
     // CONSTRUCTORES
