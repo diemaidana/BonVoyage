@@ -17,7 +17,7 @@
             style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);"
             xmlns="http://javafx.com/javafx/23"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="progiipoo.bonvoyageapp.controller.inicioController">
+            fx:controller="progiipoo.bonvoyageapp.controller.InicioController">
    <children>
       <GridPane layoutY="7.0" prefHeight="590.0" prefWidth="400.0">
         <columnConstraints>

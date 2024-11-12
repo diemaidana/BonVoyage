@@ -10,7 +10,11 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.registrarUsuarioController">
+<AnchorPane prefHeight="600.0"
+            prefWidth="600.0"
+            style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);"
+            xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="progiipoo.bonvoyageapp.controller.RegistrarUsuarioController">
    <children>
       <GridPane alignment="CENTER" prefHeight="600.0" prefWidth="600.0">
         <columnConstraints>
