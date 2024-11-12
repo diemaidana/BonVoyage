@@ -1,21 +1,18 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
-public class SeguroViaje extends ElementoViaje {
+public final class SeguroViaje extends ElementoViaje {
     private int cantDias;
-    private String destinoContinente;
-
-    // CONSTRUCTOR VACIO
+    private String pais;
+    // CONSTRUCTOR
     public SeguroViaje() {
         super();
-        this.destinoContinente = null;
+        this.pais = null;
         this.cantDias = 0;
     }
-
-    // CONSTRUCTOR
-    public SeguroViaje(Double precio, String fechaRegreso, String fechaInicio, String ciudad, String provincia, String pais, int cantDias, String destinoContinente) {
-        super(precio, fechaRegreso, fechaInicio, ciudad, provincia, pais);
+    public SeguroViaje(Double precio, String pais, int cantDias) {
+        super(precio);
+        this.pais = pais;
         this.cantDias = cantDias;
-        this.destinoContinente = destinoContinente;
     }
 
     // SETTERS
@@ -23,14 +20,14 @@ public class SeguroViaje extends ElementoViaje {
         this.cantDias = cantDias;
     }
 
-    public void setDestinoContinente(String destinoContinente) {
-        this.destinoContinente = destinoContinente;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
     // GETTERS
     public int getCantDias() {
         return cantDias;
     }
-    public String getDestinoContinente() {
-        return destinoContinente;
+    public String getPais() {
+        return pais;
     }
 }
