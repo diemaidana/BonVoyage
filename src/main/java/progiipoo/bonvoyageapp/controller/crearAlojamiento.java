@@ -44,7 +44,6 @@ public class crearAlojamiento {
     @FXML
     void onCrearClick(ActionEvent event) {
         Alojamiento a  = new Alojamiento();
-
         a.setPrecio(Double.parseDouble(txtPrecio.getText()));
         if(checkTrue.isSelected()){
             a.setDesayuno(checkTrue.isSelected());
@@ -52,7 +51,6 @@ public class crearAlojamiento {
         else{
             a.setDesayuno(!checkFalse.isSelected());
         }
-
         a.setCiudad(txtCiudad.getText());
         a.setProvincia(txtProvincia.getText());
         a.setPais(txtPais.getText());
