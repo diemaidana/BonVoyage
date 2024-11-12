@@ -1,6 +1,5 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public final class Alojamiento extends ElementoViaje {
@@ -8,9 +7,9 @@ public final class Alojamiento extends ElementoViaje {
     private String ubicacion;
     private ArrayList<Integer> puntuacion;
     private boolean desayuno;
-    private String ciudad;
-    private String pais;
-    private String provincia;
+    protected String ciudad;
+    protected String pais;
+    protected String provincia;
 
     // CONSTRUCTOR VACIO
     public Alojamiento() {
@@ -20,11 +19,11 @@ public final class Alojamiento extends ElementoViaje {
         this.desayuno = false;
     }
     // CONSTRUCTOR
-    public Alojamiento(Double precio, int cantDias, String ubicacion, boolean desayuno, String ciudad, String pais, String provincia) {
+    public Alojamiento(Double precio, int cantDias, String ubicacion, ArrayList<Integer> puntuacion, boolean desayuno, String ciudad, String pais, String provincia) {
         super(precio);
         this.cantDias = cantDias;
         this.ubicacion = ubicacion;
-        this.puntuacion = new ArrayList<>();
+        this.puntuacion = puntuacion;
         this.desayuno = desayuno;
         this.ciudad = ciudad;
         this.pais = pais;
@@ -54,21 +53,27 @@ public final class Alojamiento extends ElementoViaje {
         this.provincia = provincia;
     }
     // GETTERS
+
     public int getCantDias() {
         return cantDias;
     }
+
     public String getUbicacion() {
         return ubicacion;
     }
+
     public boolean isDesayuno() {
         return desayuno;
     }
+
     public String getCiudad() {
         return ciudad;
     }
+
     public String getPais() {
         return pais;
     }
+
     public String getProvincia() {
         return provincia;
     }

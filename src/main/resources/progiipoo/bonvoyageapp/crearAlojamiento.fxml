@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.InicioController">
+<AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.crearAlojamiento">
    <children>
       <GridPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="600.0">
          <columnConstraints>
