@@ -10,13 +10,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import progiipoo.bonvoyageapp.HelloApplication;
 import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
 import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 
 import java.io.IOException;
 
-public class registrarUsuarioController {
+public class RegistrarUsuarioController {
     @FXML
     private Button btnCancelar;
 

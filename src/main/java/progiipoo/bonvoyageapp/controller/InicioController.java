@@ -1,6 +1,5 @@
 package progiipoo.bonvoyageapp.controller;
 
-import javafx.collections.ObservableArray;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +15,7 @@ import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class inicioController {
+public class InicioController {
     @FXML
     private Button btnIniciarSesion;
 
@@ -36,7 +35,15 @@ public class inicioController {
 
     @FXML
     void onIniciarSesionClick(ActionEvent event) {
-
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/sesionCliente.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
         // INFORMAR QUE EMAIL O CONTRASENIA INCORRECTAS
     }
 
