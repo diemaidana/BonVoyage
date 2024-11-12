@@ -62,8 +62,8 @@ public final class Alojamiento extends ElementoViaje {
         return ubicacion;
     }
 
-    public ArrayList<Integer> getPuntuacion() {
-        return puntuacion;
+    public ArrayList<Integer> getPuntuacion(Integer punto) {
+        puntuacion.add(punto);
     }
 
     public boolean isDesayuno() {
@@ -81,4 +81,10 @@ public final class Alojamiento extends ElementoViaje {
     public String getProvincia() {
         return provincia;
     }
+    public Integer getPuntuacion() {
+        Integer promedio = 0;
+        for(Integer i: this.puntuacion){
+            promedio += i;
+        }
+        return Math.round(promedio / puntuacion.size());
 }
