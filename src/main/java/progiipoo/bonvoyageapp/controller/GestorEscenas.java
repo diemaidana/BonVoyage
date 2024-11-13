@@ -7,9 +7,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Queue;
 import java.util.ResourceBundle;
 
 public class GestorEscenas implements Initializable {
@@ -27,6 +29,23 @@ public class GestorEscenas implements Initializable {
             stage.show();
         }catch(IOException e){
             e.printStackTrace();
+        }
+    }
+
+    public static void abrirEscena(ActionEvent event, String archivo, Usuario u){
+        try{
+            FXMLLoader loader = new FXMLLoader(GestorEscenas.class.getResource(archivo));
+            Parent root = loader.load();
+            SesionClienteController sesion = loader.getController();
+            sesion.setUsuario(u);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.show();
+        }catch(IOException e){
+            e.printStackTrace();
+            e.getCause();
         }
     }
 

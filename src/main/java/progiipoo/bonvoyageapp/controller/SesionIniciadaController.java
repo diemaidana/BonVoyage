@@ -2,10 +2,15 @@ package progiipoo.bonvoyageapp.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
-public class SesionIniciadaController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class SesionIniciadaController extends SesionClienteController {
     @FXML
     private Button btnAlojamiento;
 
@@ -26,6 +31,14 @@ public class SesionIniciadaController {
 
     @FXML
     private Button btnVuelos;
+
+    public SesionIniciadaController() {
+        super();
+    }
+
+    public SesionIniciadaController(Usuario u) {
+        super(u);
+    }
 
     @FXML
     void onAlojamientoClick(ActionEvent event) {

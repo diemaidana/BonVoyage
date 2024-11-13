@@ -3,30 +3,47 @@ package progiipoo.bonvoyageapp.model.gestores;
 import progiipoo.bonvoyageapp.model.Contenedora;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
+import java.util.HashMap;
+
 public class GestorUsuarios {
-    private static Contenedora<Usuario> usuarios = new Contenedora<>();
+    private static HashMap<String, Usuario> usuarios = new HashMap<>();
 
     public static void agregarUsuario(Usuario u){
-        usuarios.agregarElemento(u);
+        usuarios.put(u.getEmail(), u);
     }
 
     public static void eliminarUsuario(Usuario u){
-        usuarios.eliminarElemento(u);
+        usuarios.remove(u.getEmail());
     }
 
-    public static Boolean contieneUsuario(Usuario u){
-        return contieneUsuario(u);
+    public static Boolean contieneUsuario(String email){
+        for (String mail : usuarios.keySet()){
+            if(mail.equals(email)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void actualizarUsuario(Usuario u){
-        usuarios.actualizarElemento(u);
+        agregarUsuario(u);
+    }
+
+    public static Boolean iniciarSesion(String email, String pass){
+        if(contieneUsuario(email)){
+            if(pass.equals(usuarios.get(email).getPassword())){
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 
     @Override
     public String toString() {
         String s = "";
-        for(Usuario u : usuarios){
-            s += u.toString();
+        for(String user : usuarios.keySet()){
+            s += usuarios.get(user).toString();
         }
         return "GestorUsuarios{}";
     }
