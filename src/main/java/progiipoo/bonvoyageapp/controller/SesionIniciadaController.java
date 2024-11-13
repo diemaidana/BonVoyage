@@ -29,12 +29,12 @@ public class SesionIniciadaController {
 
     @FXML
     void onAlojamientoClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteAlojamiento.fxml");
     }
 
     @FXML
     void onCerrarSesionClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
     }
 
     @FXML
@@ -44,21 +44,21 @@ public class SesionIniciadaController {
 
     @FXML
     void onOfertasClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml");
     }
 
     @FXML
     void onPaquetesClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml");
     }
 
     @FXML
     void onSegurosClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml");
     }
 
     @FXML
     void onVuelosClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml");
     }
 }

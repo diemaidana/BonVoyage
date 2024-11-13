@@ -72,6 +72,9 @@
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
                   </HBox>
                </children>
             </GridPane>

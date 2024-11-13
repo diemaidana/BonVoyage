@@ -52,7 +52,7 @@
                         <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="189.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Vuelos" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <Label text="Alojamientos" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                             <font>
                                 <Font name="System Bold" size="95.0" />
                             </font>
