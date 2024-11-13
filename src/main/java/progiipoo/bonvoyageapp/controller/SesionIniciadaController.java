@@ -57,21 +57,21 @@ public class SesionIniciadaController extends SesionClienteController {
 
     @FXML
     void onOfertasClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml", usuario);
     }
 
     @FXML
     void onPaquetesClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml", usuario);
     }
 
     @FXML
     void onSegurosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml", usuario);
     }
 
     @FXML
     void onVuelosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml", usuario);
     }
 }

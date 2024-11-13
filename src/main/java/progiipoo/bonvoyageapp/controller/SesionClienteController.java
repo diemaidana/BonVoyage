@@ -3,7 +3,7 @@ package progiipoo.bonvoyageapp.controller;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
 public class SesionClienteController {
-    private Usuario usuario;
+    protected Usuario usuario;
 
     public SesionClienteController() {
         usuario = null;

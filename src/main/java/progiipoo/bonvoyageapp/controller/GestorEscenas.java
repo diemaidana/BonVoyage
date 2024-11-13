@@ -36,8 +36,11 @@ public class GestorEscenas implements Initializable {
         try{
             FXMLLoader loader = new FXMLLoader(GestorEscenas.class.getResource(archivo));
             Parent root = loader.load();
+
             SesionClienteController sesion = loader.getController();
+
             sesion.setUsuario(u);
+
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
