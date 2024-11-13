@@ -48,16 +48,7 @@ public class CrearVueloController {
 
     @FXML
     void onCancelarClick(ActionEvent event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/inicio.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.centerOnScreen();
-            stage.show();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
     }
 
     @FXML
