@@ -3,14 +3,22 @@ package progiipoo.bonvoyageapp.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-public class SesionIniciadaController {
+public class SesionClienteVuelosController {
     @FXML
     private Button btnAlojamiento;
 
     @FXML
+    private Button btnBuscar;
+
+    @FXML
     private Button btnCerrarSesion;
+
+    @FXML
+    private Button btnComprar;
 
     @FXML
     private Button btnMiCuenta;
@@ -28,12 +36,37 @@ public class SesionIniciadaController {
     private Button btnVuelos;
 
     @FXML
+    private DatePicker partida;
+
+    @FXML
+    private DatePicker regreso;
+
+    @FXML
+    private TableView<?> tblVuelos;
+
+    @FXML
+    private TextField txtCiudad;
+
+    @FXML
+    private TextField txtPais;
+
+    @FXML
     void onAlojamientoClick(ActionEvent event) {
 
     }
 
     @FXML
+    void onBuscarClick(ActionEvent event) {
+
+    }
+
+    @FXML
     void onCerrarSesionClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onComprarClick(ActionEvent event) {
 
     }
 
