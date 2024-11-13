@@ -6,8 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
-public class SesionClienteSeguroController {
+public class SesionClienteSeguroController extends SesionClienteController{
     @FXML
     private Button btnAlojamiento;
 
@@ -62,9 +63,17 @@ public class SesionClienteSeguroController {
     @FXML
     private TableView<?> tblVuelos;
 
+    public SesionClienteSeguroController() {
+        super();
+    }
+
+    public SesionClienteSeguroController(Usuario usuario) {
+        super(usuario);
+    }
+
     @FXML
     void onAlojamientoClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteAlojamiento.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteAlojamiento.fxml", usuario);
     }
 
     @FXML
@@ -89,21 +98,21 @@ public class SesionClienteSeguroController {
 
     @FXML
     void onOfertasClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml", usuario);
     }
 
     @FXML
     void onPaquetesClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml", usuario);
     }
 
     @FXML
     void onSegurosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml", usuario);
     }
 
     @FXML
     void onVuelosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml", usuario);
     }
 }

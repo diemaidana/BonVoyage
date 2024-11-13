@@ -6,8 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
-public class SesionClienteVuelosController {
+public class SesionClienteVuelosController extends SesionClienteController {
     @FXML
     private Button btnAlojamiento;
 
@@ -50,9 +51,17 @@ public class SesionClienteVuelosController {
     @FXML
     private TextField txtPais;
 
+    public SesionClienteVuelosController() {
+        super();
+    }
+
+    public SesionClienteVuelosController(Usuario usuario) {
+        super(usuario);
+    }
+
     @FXML
     void onAlojamientoClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteAlojamiento.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteAlojamiento.fxml", usuario);
     }
 
     @FXML
@@ -77,21 +86,21 @@ public class SesionClienteVuelosController {
 
     @FXML
     void onOfertasClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml", usuario);
     }
 
     @FXML
     void onPaquetesClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClientePaquete.fxml", usuario);
     }
 
     @FXML
     void onSegurosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteSeguro.fxml", usuario);
     }
 
     @FXML
     void onVuelosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionClienteVuelos.fxml", usuario);
     }
 }

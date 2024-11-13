@@ -90,5 +90,6 @@ public class RegistrarUsuarioController {
         c.setPais(txtPais.getText());
 
         GestorUsuarios.agregarUsuario(c);
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml", c);
     }
 }

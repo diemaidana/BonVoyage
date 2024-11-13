@@ -4,7 +4,6 @@ import progiipoo.bonvoyageapp.model.Contenedora;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 
 public class GestoraViaje {
-
     private static Contenedora<ElementoViaje> lista = new Contenedora<>();
 
     public static void agregarElemento(ElementoViaje e) {
@@ -23,5 +22,4 @@ public class GestoraViaje {
     public static Boolean contieneElemento(ElementoViaje e){
         return lista.contieneElemento(e);
     }
-
 }
