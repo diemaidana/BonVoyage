@@ -3,6 +3,7 @@ package progiipoo.bonvoyageapp.model.viaje;
 public final class SeguroViaje extends ElementoViaje {
     private int cantDias;
     private String pais;
+
     // CONSTRUCTOR
     public SeguroViaje() {
         super();
