@@ -2,6 +2,7 @@ package progiipoo.bonvoyageapp.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
@@ -44,6 +45,7 @@ public class CrearSeguroController {
     @FXML
     void onConfirmarSeguroClick(ActionEvent event) {
         SeguroViaje s = new SeguroViaje();
+
         s.setDestino(txtDestino.getText());
         s.setTipoAsistencia(txtTipoDeAsistencia.getText());
         s.setAsistenciaMedica(txtAsistenciaMedica.getText());
@@ -51,5 +53,10 @@ public class CrearSeguroController {
         s.setPerdidaEquipaje(txtPerdidaDeEquipaje.getText());
         s.setVueloDemorado(txtVueloDemorado.getText());
         s.setPrecio(Double.parseDouble(txtPrecio.getText()));
+
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Seguro creado");
+        alerta.setHeaderText(null);
+        alerta.show();
     }
 }
