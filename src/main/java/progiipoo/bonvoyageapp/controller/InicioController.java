@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
@@ -26,7 +27,7 @@ public class InicioController {
     private Hyperlink hlkOlvidoPassword;
 
     @FXML
-    private TextField txtPassword;
+    private PasswordField txtPassword;
 
     @FXML
     private TextField txtUsuario;
