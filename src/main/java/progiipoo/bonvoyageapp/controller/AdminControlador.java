@@ -40,7 +40,6 @@ public class AdminControlador {
         }catch(IOException e){
             e.printStackTrace();
         }
-
     }
 
     @FXML
