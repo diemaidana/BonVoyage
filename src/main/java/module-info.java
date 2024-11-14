@@ -3,6 +3,8 @@ module progiipoo.bonvoyageapp {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
+    requires org.json;
+    requires jdk.jsobject;
 
     opens progiipoo.bonvoyageapp to javafx.fxml;
     exports progiipoo.bonvoyageapp;
