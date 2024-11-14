@@ -12,7 +12,7 @@ public class BonVoyageApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(BonVoyageApplication.class.getResource("inicio.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 650);
-        stage.setTitle("Bon Voyage!");
+        stage.setTitle("BonVoyage!");
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();

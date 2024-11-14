@@ -31,7 +31,7 @@
             <children>
                 <ImageView fitHeight="228.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <image>
-                        <Image url="@../../images/Bon%20Voyage%20Sin%20Fondo.png" />
+                        <Image url="@../../../images/Bon Voyage Sin Fondo.png" />
                     </image>
                 </ImageView>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">

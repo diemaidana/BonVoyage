@@ -33,6 +33,7 @@ public final class Administrador extends Usuario {
 
     @Override
     public Boolean puedeCargar() {
+
         return true;
     }
 }
