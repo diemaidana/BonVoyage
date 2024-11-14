@@ -1,5 +1,9 @@
 package progiipoo.bonvoyageapp.model.MetodosDePago;
 
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
+import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
+import progiipoo.bonvoyageapp.model.viaje.Vuelo;
+
 public class ServicioCompraPaquete {
     private Cliente cliente;
     private Vuelo vuelo;
