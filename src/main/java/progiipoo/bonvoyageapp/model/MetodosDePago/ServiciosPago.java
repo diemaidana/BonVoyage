@@ -1,20 +1,18 @@
 package progiipoo.bonvoyageapp.model.MetodosDePago;
 
 public class ServiciosPago {
-    private MetodoDePago metodoDePago;
+    private TarjetaCredito tarjeta;
 
-    public ServiciosPago(MetodoDePago metodoDePago) {
-        this.metodoDePago = metodoDePago;
-    }
+    public ServiciosPago(TarjetaCredito tarjeta) {this.tarjeta = tarjeta;}
 
     public boolean procesarPago(double montoTotal) {
 
-
-        if (metodoDePago.procesarPago(montoTotal)) {
+        if (this.tarjeta.esValida() && montoTotal>0){
             System.out.println("Pago procesado correctamente");
             return true;
+        }else {
+            System.out.println("Error al procesar el pago");
+            return false;
         }
-        System.out.println("Error al procesar el pago");
-        return false;
     }
 }
