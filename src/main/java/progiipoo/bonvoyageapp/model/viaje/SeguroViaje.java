@@ -43,7 +43,7 @@ public final class SeguroViaje extends ElementoViaje {
         this.tipoAsistencia = obj.getString("tipoAsistencia");
         this.asistenciaMedica = obj.getString("asistenciaMedica");
         this.medicamentos = obj.getString("medicamentos");
-        this.perdidaEquipaje = obj.getString("perdidaEquipaja");
+        this.perdidaEquipaje = obj.getString("perdidaEquipaje");
         this.vueloDemorado = obj.getString("vueloDemorado");
     }
 

@@ -11,6 +11,7 @@ import javafx.scene.layout.HBox;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
+import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
@@ -27,13 +28,13 @@ public class SesionIniciadaController extends SesionClienteController {
     private Button btnCerrarSesion;
 
     @FXML
+    private Button btnComprar;
+
+    @FXML
     private Button btnMiCuenta;
 
     @FXML
     private Button btnOfertas;
-
-    @FXML
-    private Button btnPaquetes;
 
     @FXML
     private Button btnSeguros;
@@ -42,16 +43,34 @@ public class SesionIniciadaController extends SesionClienteController {
     private Button btnVuelos;
 
     @FXML
-    private TableColumn<?, ?> colAlojamiento;
+    private TableColumn colAlojamiento;
 
     @FXML
-    private TableColumn<?, ?> colVuelo;
+    private TableColumn colDestinoAlojamiento;
 
     @FXML
-    private TableView<?> tblAlojamiento;
+    private TableColumn colDestinoVuelo;
 
     @FXML
-    private TableView<?> tblVuelos;
+    private TableColumn colOrigenAlojamiento;
+
+    @FXML
+    private TableColumn colOrigenVuelo;
+
+    @FXML
+    private TableColumn colPrecioAlojamiento;
+
+    @FXML
+    private TableColumn colPrecioVuelo;
+
+    @FXML
+    private TableColumn colVuelo;
+
+    @FXML
+    private TableView<Vuelo> tblVuelos;
+
+    @FXML
+    private TableView<Alojamiento> tblAlojamiento;
 
     public SesionIniciadaController() {
         super();
@@ -94,5 +113,11 @@ public class SesionIniciadaController extends SesionClienteController {
     @FXML
     void onVuelosClick(ActionEvent event) {
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/vuelos.fxml", usuario);
+    }
+
+
+    @FXML
+    void onComprarClick(ActionEvent event) {
+
     }
 }

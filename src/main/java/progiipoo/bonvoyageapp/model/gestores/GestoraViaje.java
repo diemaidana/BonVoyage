@@ -34,4 +34,19 @@ public class GestoraViaje {
     public static Contenedora<ElementoViaje> getLista() {
         return lista;
     }
+
+    public ArrayList<Vuelo> getVuelos(){
+        return getVuelosBaratos();
+    }
+
+    private ArrayList<Vuelo> getVuelosBaratos(){
+        ArrayList<Vuelo> vuelos = new ArrayList<>();
+        for(ElementoViaje e : lista){
+            if(e.getClass().equals(Vuelo.class)){
+                vuelos.add((Vuelo)e);
+            }
+        }
+        Collections.sort(vuelos);
+        return (ArrayList<Vuelo>) vuelos.subList(0,2);
+    }
 }

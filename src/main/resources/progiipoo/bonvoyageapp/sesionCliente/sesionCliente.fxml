@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -15,19 +14,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="720.0" minWidth="1280.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionCliente.SesionIniciadaController">
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionCliente.SesionIniciadaController">
    <children>
       <GridPane prefHeight="720.0" prefWidth="1280.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="235.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1045.0" minWidth="10.0" prefWidth="1045.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="235.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="485.0" minHeight="10.0" prefHeight="485.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="235.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1045.0" minWidth="10.0" prefWidth="1045.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="198.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="526.0" minHeight="10.0" prefHeight="522.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <ImageView fitHeight="228.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <ImageView fitHeight="200.0" fitWidth="211.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <image>
                   <Image url="@../../../images/Bon Voyage Sin Fondo.png" />
                </image>
@@ -36,56 +35,50 @@
                <children>
                   <Button fx:id="btnOfertas" disable="true" minWidth="100.0" mnemonicParsing="false" onAction="#onOfertasClick" text="Ofertas" />
                   <Button fx:id="btnVuelos" minWidth="100.0" mnemonicParsing="false" onAction="#onVuelosClick" text="Vuelos" />
-                  <Button fx:id="btnPaquetes" minWidth="100.0" mnemonicParsing="false" onAction="#onPaquetesClick" text="Paquetes" />
                   <Button fx:id="btnAlojamiento" minWidth="100.0" mnemonicParsing="false" onAction="#onAlojamientoClick" text="Alojamiento" />
                   <Button fx:id="btnSeguros" minWidth="100.0" mnemonicParsing="false" onAction="#onSegurosClick" text="Seguros" />
                </children>
             </VBox>
-            <GridPane GridPane.columnIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="189.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <children>
-                  <Label text="Ofertas" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                     <font>
-                        <Font name="System Bold" size="95.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.halignment="RIGHT">
+                  <TableView fx:id="tblVuelos" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="colVuelo" prefWidth="75.0" text="Vuelo" />
+                        <TableColumn fx:id="colOrigenVuelo" prefWidth="75.0" text="Origen" />
+                        <TableColumn fx:id="colDestinoVuelo" prefWidth="75.0" text="Destino" />
+                        <TableColumn fx:id="colPrecioVuelo" prefWidth="75.0" text="Precio" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="tblAlojamiento" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="colAlojamiento" prefWidth="75.0" text="Alojamiento" />
+                        <TableColumn fx:id="colOrigenAlojamiento" prefWidth="75.0" text="Origen" />
+                        <TableColumn fx:id="colDestinoAlojamiento" prefWidth="75.0" text="Destino" />
+                        <TableColumn fx:id="colPrecioAlojamiento" prefWidth="75.0" text="Precio" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnComprar" mnemonicParsing="false" onAction="#onComprarClick" prefWidth="200.0" text="Comprar" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="1045.0" spacing="20.0">
                      <children>
                         <Button fx:id="btnMiCuenta" alignment="CENTER" minWidth="85.0" mnemonicParsing="false" onAction="#onMiCuentaClick" text="Mi cuenta" />
                         <Button fx:id="btnCerrarSesion" alignment="CENTER" mnemonicParsing="false" onAction="#onCerrarSesionClick" text="Cerrar sesion" />
                      </children>
-                     <GridPane.margin>
-                        <Insets top="10.0" />
-                     </GridPane.margin>
                      <padding>
                         <Insets right="10.0" />
                      </padding>
                   </HBox>
-               </children>
-            </GridPane>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <TableView fx:id="tblVuelos" prefHeight="200.0" prefWidth="200.0">
-                    <columns>
-                      <TableColumn fx:id="colVuelo" prefWidth="75.0" text="Vuelo" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
-                  <TableView fx:id="tblAlojamiento" prefHeight="200.0" prefWidth="200.0">
-                    <columns>
-                      <TableColumn fx:id="colAlojamiento" prefWidth="75.0" text="Alojamiento" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
+                  <Label text="Ofertas">
+                     <font>
+                        <Font name="System Bold" size="95.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
          </children>
       </GridPane>
    </children>
-</AnchorPane>
+</VBox>
