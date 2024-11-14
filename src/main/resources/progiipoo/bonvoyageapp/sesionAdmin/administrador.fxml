@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/Bon%20Voyage%20Sin%20Fondo.png" />
+                  <Image url="@../../../images/Bon Voyage Sin Fondo.png" />
                </image>
             </ImageView>
             <Button fx:id="btnCrearVuelo" mnemonicParsing="false" onAction="#onCrearVueloClick" prefWidth="150.0" text="Crear vuelo" />

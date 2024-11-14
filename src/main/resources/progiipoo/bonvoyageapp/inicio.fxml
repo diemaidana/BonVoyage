@@ -51,7 +51,7 @@
             </GridPane>
             <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
                <image>
-                  <Image url="@../../images/Bon%20Voyage%20Sin%20Fondo.png" />
+                  <Image url="@../../images/Bon Voyage Sin Fondo.png" />
                </image>
             </ImageView>
          </children>
