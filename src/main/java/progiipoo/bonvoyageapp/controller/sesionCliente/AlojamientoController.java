@@ -2,14 +2,11 @@ package progiipoo.bonvoyageapp.controller.sesionCliente;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
-public class SesionClientePaqueteController extends SesionClienteController{
+public class AlojamientoController extends SesionClienteController{
     @FXML
     private Button btnAlojamiento;
 
@@ -38,43 +35,52 @@ public class SesionClientePaqueteController extends SesionClienteController{
     private Button btnVuelos;
 
     @FXML
-    private TableColumn<?, ?> colAsistenciaMedica;
+    private DatePicker checkIn;
 
     @FXML
-    private TableColumn<?, ?> colCantidadDias;
+    private DatePicker checkOut;
 
     @FXML
-    private TableColumn<?, ?> colEquipaje;
+    private TableColumn<?, ?> colCiudad;
 
     @FXML
-    private TableColumn<?, ?> colMedicamentos;
+    private TableColumn<?, ?> colDesayuno;
 
     @FXML
-    private TableColumn<?, ?> colTipoAsistencia;
+    private TableColumn<?, ?> colHotel;
 
     @FXML
-    private TableColumn<?, ?> colVueloDemorado;
+    private TableColumn<?, ?> colNoches;
 
     @FXML
-    private DatePicker partida;
+    private TableColumn<?, ?> colPais;
 
     @FXML
-    private DatePicker regreso;
+    private TableColumn<?, ?> colPrecio;
+
+    @FXML
+    private TableColumn<?, ?> colPuntuacion;
 
     @FXML
     private TableView<?> tblVuelos;
 
-    public SesionClientePaqueteController() {
+    @FXML
+    private TextField txtCiudad;
+
+    @FXML
+    private TextField txtPais;
+
+    public AlojamientoController() {
         super();
     }
 
-    public SesionClientePaqueteController(Usuario usuario) {
+    public AlojamientoController(Usuario usuario) {
         super(usuario);
     }
 
     @FXML
     void onAlojamientoClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionClienteAlojamiento.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/alojamiento.fxml");
     }
 
     @FXML
@@ -99,21 +105,21 @@ public class SesionClientePaqueteController extends SesionClienteController{
 
     @FXML
     void onOfertasClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml", usuario);
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/paquete.fxml", usuario);
     }
 
     @FXML
     void onPaquetesClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionClientePaquete.fxml", usuario);
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/paquete.fxml", usuario);
     }
 
     @FXML
     void onSegurosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionClienteSeguro.fxml", usuario);
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/seguro.fxml", usuario);
     }
 
     @FXML
     void onVuelosClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionClienteVuelos.fxml", usuario);
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/vuelos.fxml", usuario);
     }
 }
