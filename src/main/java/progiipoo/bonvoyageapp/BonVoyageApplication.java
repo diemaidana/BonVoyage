@@ -20,7 +20,7 @@ public class BonVoyageApplication extends Application {
         }
 
         FXMLLoader fxmlLoader = new FXMLLoader(BonVoyageApplication.class.getResource("inicio.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 650);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("BonVoyage!");
         Image icon = new Image(getClass().getResourceAsStream("/images/Bon Voyage Logo Avion.png"));
         stage.getIcons().add(icon);
