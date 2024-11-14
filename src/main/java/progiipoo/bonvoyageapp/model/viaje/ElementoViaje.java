@@ -1,5 +1,8 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.UUID;
 
 public class ElementoViaje {
@@ -19,5 +22,15 @@ public class ElementoViaje {
     // GETTERS
     public Double getPrecio() {
         return precio;
+    }
+
+    public JSONObject toJSON() {
+        JSONObject json = new JSONObject();
+        try{
+            json.put("precio", precio);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return json;
     }
 }

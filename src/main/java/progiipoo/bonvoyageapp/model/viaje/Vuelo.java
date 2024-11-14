@@ -1,5 +1,8 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.time.LocalDate;
 
 public final class Vuelo extends ElementoViaje{
@@ -31,6 +34,17 @@ public final class Vuelo extends ElementoViaje{
         this.paisDestino = paisDestino;
         this.provinciaDestino = provinciaDestino;
         this.fechaVuelo = fechaVuelo;
+    }
+
+    public Vuelo(JSONObject obj) {
+        super(obj.getDouble("precio"));
+        this.ciudadOrigen = obj.getString("ciudadOrigen");
+        this.paisOrigen = obj.getString("paisOrigen");
+        this.provinciaOrigen = obj.getString("provinciaOrigen");
+        this.ciudadDestino = obj.getString("ciudadDestino");
+        this.paisDestino = obj.getString("paisDestino");
+        this.provinciaDestino = obj.getString("provinciaDestino");
+        this.fechaVuelo = LocalDate.parse(obj.getString("fechaVuelo"));
     }
 
     // SETTERS
@@ -76,5 +90,21 @@ public final class Vuelo extends ElementoViaje{
     }
     public LocalDate getFechaVuelo() {
         return fechaVuelo;
+    }
+
+    public JSONObject toJSON(){
+        JSONObject obj = super.toJSON();
+        try{
+            obj.put("ciudadOrigen", this.ciudadOrigen);
+            obj.put("paisOrigen", this.paisOrigen);
+            obj.put("provinciaOrigen", this.provinciaOrigen);
+            obj.put("ciudadDestino", this.ciudadDestino);
+            obj.put("paisDestino", this.paisDestino);
+            obj.put("provinciaDestino", this.provinciaDestino);
+            obj.put("fechaVuelo", this.fechaVuelo);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return obj;
     }
 }

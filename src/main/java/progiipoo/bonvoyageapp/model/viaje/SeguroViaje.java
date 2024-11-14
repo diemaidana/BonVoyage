@@ -1,5 +1,8 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public final class SeguroViaje extends ElementoViaje {
     private int cantDias;
     private String destino;
@@ -31,6 +34,17 @@ public final class SeguroViaje extends ElementoViaje {
         this.medicamentos = medicamentos;
         this.perdidaEquipaje = perdidaEquipaje;
         this.vueloDemorado = vueloDemorado;
+    }
+
+    public SeguroViaje(JSONObject obj) {
+        super(obj.getDouble("precio"));
+        this.cantDias = obj.getInt("cantDias");
+        this.destino = obj.getString("destino");
+        this.tipoAsistencia = obj.getString("tipoAsistencia");
+        this.asistenciaMedica = obj.getString("asistenciaMedica");
+        this.medicamentos = obj.getString("medicamentos");
+        this.perdidaEquipaje = obj.getString("perdidaEquipaja");
+        this.vueloDemorado = obj.getString("vueloDemorado");
     }
 
     //GET Y SET
@@ -89,6 +103,22 @@ public final class SeguroViaje extends ElementoViaje {
 
     public void setVueloDemorado(String vueloDemorado) {
         this.vueloDemorado = vueloDemorado;
+    }
+
+    public JSONObject toJSON(){
+        JSONObject json = super.toJSON();
+        try{
+            json.put("cantDias", cantDias);
+            json.put("destino", destino);
+            json.put("tipoAsistencia", tipoAsistencia);
+            json.put("asistenciaMedica", asistenciaMedica);
+            json.put("medicamentos", medicamentos);
+            json.put("perdidaEquipaje", perdidaEquipaje);
+            json.put("vueloDemorado", vueloDemorado);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return json;
     }
 
 
