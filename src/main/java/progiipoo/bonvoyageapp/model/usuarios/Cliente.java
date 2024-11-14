@@ -12,6 +12,8 @@ public final class Cliente extends Usuario{
     private String provincia;
     private String pais;
 
+
+
     public Cliente() {
         super();
         telefono = "";
