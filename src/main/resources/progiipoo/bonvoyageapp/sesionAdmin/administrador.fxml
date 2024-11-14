@@ -4,28 +4,21 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionAdmin.AdminControlador">
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="400.0" spacing="50.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionAdmin.AdminControlador">
    <children>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/Bon Voyage Sin Fondo.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnCrearVuelo" mnemonicParsing="false" onAction="#onCrearVueloClick" prefWidth="150.0" text="Crear vuelo" />
-            <Button fx:id="btnCrearPaquete" mnemonicParsing="false" onAction="#onCrearPaqueteClick" prefWidth="150.0" text="Crear paquete" />
-            <Button fx:id="btnCrearAlojamiento" mnemonicParsing="false" onAction="#onCrearAlojamientoClick" prefWidth="150.0" text="Crear alojamiento" />
-            <Button fx:id="btnCrearSeguroDeVijae" mnemonicParsing="false" onAction="#onCrearSeguroDeViajeClick" prefWidth="150.0" text="Crear seguro de viaje" />
-            <Button fx:id="btnCerrarSesion" mnemonicParsing="false" onAction="#onCerrarSesionClick" text="Cerrar sesion" />
-         </children>
-         <padding>
-            <Insets top="20.0" />
-         </padding>
-      </VBox>
+      <ImageView fitHeight="262.0" fitWidth="399.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Bon Voyage Sin Fondo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCrearVuelo" mnemonicParsing="false" onAction="#onCrearVueloClick" prefWidth="150.0" text="Crear vuelo" />
+      <Button fx:id="btnCrearAlojamiento" mnemonicParsing="false" onAction="#onCrearAlojamientoClick" prefWidth="150.0" text="Crear alojamiento" />
+      <Button fx:id="btnCrearSeguroDeVijae" mnemonicParsing="false" onAction="#onCrearSeguroDeViajeClick" prefWidth="150.0" text="Crear seguro de viaje" />
+      <Button fx:id="btnCerrarSesion" mnemonicParsing="false" onAction="#onCerrarSesionClick" prefWidth="150.0" text="Cerrar sesion" />
    </children>
-</AnchorPane>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</VBox>
