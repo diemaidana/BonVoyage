@@ -8,6 +8,10 @@ import java.util.HashMap;
 public class GestorUsuarios {
     private static HashMap<String, Usuario> usuarios = new HashMap<>();
 
+    public static HashMap<String, Usuario> getUsuarios() {
+        return usuarios;
+    }
+
     public static void leerUsuarios(){
         usuarios = GestorJSONUsuarios.leerUsuarios();
     }
@@ -41,6 +45,10 @@ public class GestorUsuarios {
             return false;
         }
         return false;
+    }
+
+    public static Usuario getUsuario(String email) {
+        return usuarios.get(email);
     }
 
     @Override

@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONUsuarios;
 import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
 import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 
@@ -84,6 +85,7 @@ public class RegistrarUsuarioController {
         c.setPais(txtPais.getText());
 
         GestorUsuarios.agregarUsuario(c);
+        GestorJSONUsuarios.guardarUsuarios(GestorUsuarios.getUsuarios());
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml", c);
     }
 }
