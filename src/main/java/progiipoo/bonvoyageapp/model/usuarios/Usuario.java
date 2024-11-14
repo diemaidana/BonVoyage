@@ -1,5 +1,7 @@
 package progiipoo.bonvoyageapp.model.usuarios;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import progiipoo.bonvoyageapp.model.interfaces.IpuedeCargar;
 
 import java.util.Iterator;
@@ -9,18 +11,24 @@ public abstract class Usuario implements IpuedeCargar {
      private String email;
      private String dni;
      private String password;
+     private String nombre;
+     private String apellido;
 
 
     public Usuario() {
         email = "";
         password = "";
         dni = "";
+        nombre = "";
+        apellido = "";
     }
 
-    public Usuario(String email, String password, String dni) {
+    public Usuario(String email, String password, String dni, String nombre, String apellido) {
         this.email = email;
         this.password = password;
         this.dni = dni;
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
 
     public String getEmail() {
@@ -67,6 +75,20 @@ public abstract class Usuario implements IpuedeCargar {
                 ", dni='" + dni + '\'' +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    public JSONObject toJSON(){
+        JSONObject json = new JSONObject();
+        try{
+            json.put("email", email);
+            json.put("dni", dni);
+            json.put("password", password);
+            json.put("nombre", nombre);
+            json.put("apellido", apellido);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return json;
     }
 
     @Override
