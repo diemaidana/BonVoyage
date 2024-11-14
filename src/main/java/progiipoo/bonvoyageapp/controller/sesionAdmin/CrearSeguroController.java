@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import progiipoo.bonvoyageapp.controller.Exceptions.PrecioIncorrecto;
+import progiipoo.bonvoyageapp.controller.Exceptions.PrecioIncorrectoException;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
@@ -46,7 +46,7 @@ public class CrearSeguroController {
     }
 
     @FXML
-    void onConfirmarSeguroClick(ActionEvent event) {
+    void onConfirmarSeguroClick(ActionEvent event) throws PrecioIncorrectoException {
         SeguroViaje s = new SeguroViaje();
 
         s.setDestino(txtDestino.getText());
@@ -59,10 +59,10 @@ public class CrearSeguroController {
         try {
             for (int i = 0; i < precio.length(); i++) {
                 if (!Character.isDigit(precio.charAt(i))) {
-                    throw new PrecioIncorrecto("Error! ingrese un valor numerico.");
+                    throw new PrecioIncorrectoException("Error! ingrese un valor numerico.");
                 }
             }
-        }catch (PrecioIncorrecto e){
+        }catch (PrecioIncorrectoException e){
             Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setTitle("Error!");
             alerta.setHeaderText(null);
@@ -79,6 +79,6 @@ public class CrearSeguroController {
         alerta.show();
 
         GestoraViaje.agregarElemento(s);
-        GestorJSONElemenViaje.guardarElemViaje(GestoraViaje.getLista());
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 }

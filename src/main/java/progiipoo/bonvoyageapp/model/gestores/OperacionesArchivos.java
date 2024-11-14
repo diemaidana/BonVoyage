@@ -13,7 +13,7 @@ public abstract class OperacionesArchivos {
     public static void guardar(JSONObject json, String nombreArchivo){
         try{
             FileWriter archivo = new FileWriter(nombreArchivo);
-            archivo.write(json.toString());
+            archivo.write(json.toString(4));
             archivo.close();
         }catch (IOException e){
             e.printStackTrace();

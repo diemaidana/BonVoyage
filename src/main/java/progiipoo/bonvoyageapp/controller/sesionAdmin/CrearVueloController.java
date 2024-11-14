@@ -2,9 +2,11 @@ package progiipoo.bonvoyageapp.controller.sesionAdmin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import progiipoo.bonvoyageapp.controller.Exceptions.PrecioIncorrectoException;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
@@ -43,7 +45,7 @@ public class CrearVueloController {
 
     @FXML
     void onCancelarClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 
     @FXML
@@ -56,9 +58,25 @@ public class CrearVueloController {
         v.setProvinciaDestino(txtProvinciaDestino.getText());
         v.setCiudadDestino(txtCiudadDestino.getText());
         v.setFechaVuelo(dateVuelo.getValue());
+
+        String precio = txtPrecio.getText();
+        try {
+            for (int i = 0; i < precio.length(); i++) {
+                if (!Character.isDigit(precio.charAt(i))) {
+                    throw new PrecioIncorrectoException("Error! ingrese un valor numerico.");
+                }
+            }
+        }catch (PrecioIncorrectoException e){
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Error!");
+            alerta.setHeaderText(null);
+            alerta.setContentText(e.getMessage());
+            alerta.show();
+        }
+
         v.setPrecio(Double.parseDouble(txtPrecio.getText()));
 
         GestoraViaje.agregarElemento(v);
-        GestorJSONElemenViaje.guardarElemViaje(GestoraViaje.getLista());
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 }

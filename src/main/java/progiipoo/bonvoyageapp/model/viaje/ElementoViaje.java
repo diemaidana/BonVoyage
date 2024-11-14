@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 import java.util.UUID;
 
-public class ElementoViaje {
+public class ElementoViaje implements Comparable{
     protected Double precio;
 
     // CONSTRUCTORES
@@ -32,5 +32,10 @@ public class ElementoViaje {
             e.printStackTrace();
         }
         return json;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return precio.compareTo(((ElementoViaje)o).getPrecio());
     }
 }

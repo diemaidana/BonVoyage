@@ -13,27 +13,41 @@ public class GestorJSONElemenViaje {
     private static final String archivo = "src/main/resources/archivos/elemViaje.json";
 
     public static void guardarElemViaje(Contenedora<ElementoViaje> elementos){
-        JSONObject json = new JSONObject(OperacionesArchivos.leer(archivo));
-        if(json.isEmpty()){
-            try{
-                JSONArray arreglo = new JSONArray();
-                for(ElementoViaje e : elementos){
-                    arreglo.put(e.toJSON());
-                }
-                json.put("elementosViaje", arreglo);
-            }catch (JSONException e){
-                e.printStackTrace();
-            }
-            OperacionesArchivos.guardar(json, archivo);
-        }
-        else{
-            JSONArray arreglo = json.getJSONArray("elementosViaje");
+
+        JSONObject json = new JSONObject();
+        try{
+            JSONArray arreglo = new JSONArray();
             for(ElementoViaje e : elementos){
                 arreglo.put(e.toJSON());
             }
-            json.put("elementosViaje",arreglo);
-            OperacionesArchivos.guardar(json,archivo);
+            json.put("elementosViaje", arreglo);
+        }catch (JSONException e){
+            e.printStackTrace();
         }
+        OperacionesArchivos.guardar(json, archivo);
+
+
+//        JSONObject json = new JSONObject(OperacionesArchivos.leer(archivo));
+//        if(json.isEmpty()){
+//            try{
+//                JSONArray arreglo = new JSONArray();
+//                for(ElementoViaje e : elementos){
+//                    arreglo.put(e.toJSON());
+//                }
+//                json.put("elementosViaje", arreglo);
+//            }catch (JSONException e){
+//                e.printStackTrace();
+//            }
+//            OperacionesArchivos.guardar(json, archivo);
+//        }
+//        else{
+//            JSONArray arreglo = json.getJSONArray("elementosViaje");
+//            for(ElementoViaje e : elementos){
+//                arreglo.put(e.toJSON());
+//            }
+//            json.put("elementosViaje",arreglo);
+//            OperacionesArchivos.guardar(json,archivo);
+//        }
     }
 
     public static Contenedora<ElementoViaje> leerElemViaje(){
