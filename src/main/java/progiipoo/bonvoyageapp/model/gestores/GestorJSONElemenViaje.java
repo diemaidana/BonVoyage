@@ -26,7 +26,7 @@ public class GestorJSONElemenViaje {
         OperacionesArchivos.guardar(json, archivo);
     }
 
-    public Contenedora<ElementoViaje> leerElemViaje(){
+    public static Contenedora<ElementoViaje> leerElemViaje(){
         Contenedora<ElementoViaje> elementos = new Contenedora<>();
         try{
             JSONObject json = new JSONObject(OperacionesArchivos.leer(archivo));

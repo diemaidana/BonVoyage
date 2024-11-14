@@ -6,6 +6,10 @@ import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 public class GestoraViaje {
     private static Contenedora<ElementoViaje> lista = new Contenedora<>();
 
+    public static void leerElementosViaje(){
+        lista = GestorJSONElemenViaje.leerElemViaje();
+    }
+
     public static void agregarElemento(ElementoViaje e) {
         lista.agregarElemento(e);
     }
