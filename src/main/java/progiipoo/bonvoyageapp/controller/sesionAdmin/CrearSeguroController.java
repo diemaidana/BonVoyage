@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import progiipoo.bonvoyageapp.controller.Exceptions.PrecioIncorrecto;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
@@ -54,11 +55,27 @@ public class CrearSeguroController {
         s.setMedicamentos(txtMedicamentos.getText());
         s.setPerdidaEquipaje(txtPerdidaDeEquipaje.getText());
         s.setVueloDemorado(txtVueloDemorado.getText());
+        String precio = txtPrecio.getText();
+        try {
+            for (int i = 0; i < precio.length(); i++) {
+                if (!Character.isDigit(precio.charAt(i))) {
+                    throw new PrecioIncorrecto("Error! ingrese un valor numerico.");
+                }
+            }
+        }catch (PrecioIncorrecto e){
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Error!");
+            alerta.setHeaderText(null);
+            alerta.setContentText(e.getMessage());
+            alerta.show();
+        }
+
         s.setPrecio(Double.parseDouble(txtPrecio.getText()));
 
         Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
         alerta.setTitle("Seguro creado");
         alerta.setHeaderText(null);
+        alerta.setContentText("Seguro creado con Exito!");
         alerta.show();
 
         GestoraViaje.agregarElemento(s);
