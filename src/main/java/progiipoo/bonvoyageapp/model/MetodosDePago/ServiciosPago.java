@@ -9,7 +9,6 @@ public class ServiciosPago {
 
     public boolean procesarPago(double montoTotal) {
 
-
         if (metodoDePago.procesarPago(montoTotal)) {
             System.out.println("Pago procesado correctamente");
             return true;
