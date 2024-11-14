@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionAdmin.crearAlojamiento">
+<AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionAdmin.crearAlojamiento">
    <children>
       <GridPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="600.0">
          <columnConstraints>
@@ -51,7 +51,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <TextField fx:id="txtPrecio" promptText="Precio..." GridPane.columnIndex="1" />
+                        <TextField fx:id="txtPrecio" promptText="Ingresar precio..." GridPane.columnIndex="1" />
                         <TextField fx:id="txtCiudad" promptText="Ingresar ciudad..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="txtProvincia" promptText="Ingresar provincia..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextField fx:id="txtPais" promptText="Ingresar pais..." GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -60,15 +60,14 @@
                         <Label fx:id="lblCiudad" text="Ciudad" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                         <Label fx:id="lblProvincia" text="Provincia" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
                         <Label fx:id="lblPais" text="Pais" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <SplitPane dividerPositions="0.15275590551181104" prefHeight="61.0" prefWidth="509.0">
-                                 <items>
-                                    <CheckBox fx:id="btnTrue" mnemonicParsing="false" prefHeight="22.0" prefWidth="247.0" text="Si" />
-                                    <CheckBox fx:id="btnFalse" mnemonicParsing="false" prefHeight="18.0" prefWidth="258.0" text="No" />
-                                 </items>
-                              </SplitPane>
+                              <CheckBox fx:id="chkDesayunoSi" mnemonicParsing="false" text="Si" />
+                              <CheckBox fx:id="chkDesayunoNo" mnemonicParsing="false" text="No" />
                            </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
                         </HBox>
                      </children>
                   </GridPane>
