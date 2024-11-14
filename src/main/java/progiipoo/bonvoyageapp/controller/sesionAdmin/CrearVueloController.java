@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 public class CrearVueloController {
@@ -56,7 +58,7 @@ public class CrearVueloController {
         v.setFechaVuelo(dateVuelo.getValue());
         v.setPrecio(Double.parseDouble(txtPrecio.getText()));
 
-        // MODIFICAR CLASE CONTENEDORA
-        //GestoraViaje.agregar(v);
+        GestoraViaje.agregarElemento(v);
+        GestorJSONElemenViaje.guardarElemViaje(GestoraViaje.getLista());
     }
 }

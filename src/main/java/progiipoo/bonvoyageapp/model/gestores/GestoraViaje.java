@@ -26,4 +26,8 @@ public class GestoraViaje {
     public static Boolean contieneElemento(ElementoViaje e){
         return lista.contieneElemento(e);
     }
+
+    public static Contenedora<ElementoViaje> getLista() {
+        return lista;
+    }
 }

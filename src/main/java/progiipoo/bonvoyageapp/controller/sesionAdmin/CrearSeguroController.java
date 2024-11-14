@@ -6,6 +6,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 
 public class CrearSeguroController {
@@ -58,5 +60,8 @@ public class CrearSeguroController {
         alerta.setTitle("Seguro creado");
         alerta.setHeaderText(null);
         alerta.show();
+
+        GestoraViaje.agregarElemento(s);
+        GestorJSONElemenViaje.guardarElemViaje(GestoraViaje.getLista());
     }
 }

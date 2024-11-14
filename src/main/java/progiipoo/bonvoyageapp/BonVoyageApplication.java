@@ -1,5 +1,4 @@
 package progiipoo.bonvoyageapp;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +12,6 @@ import java.io.IOException;
 public class BonVoyageApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-
         try {
             GestorUsuarios.leerUsuarios();
             GestoraViaje.leerElementosViaje();

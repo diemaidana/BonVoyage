@@ -6,6 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import progiipoo.bonvoyageapp.controller.GestorEscenas;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 
 public class CrearAlojamientoController {
@@ -37,7 +40,7 @@ public class CrearAlojamientoController {
     private TextField txtProvincia;
     @FXML
     void onCancelarClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
     }
 
     @FXML
@@ -54,5 +57,7 @@ public class CrearAlojamientoController {
         a.setProvincia(txtProvincia.getText());
         a.setPais(txtPais.getText());
 
+        GestoraViaje.agregarElemento(a);
+        GestorJSONElemenViaje.guardarElemViaje(GestoraViaje.getLista());
     }
 }
