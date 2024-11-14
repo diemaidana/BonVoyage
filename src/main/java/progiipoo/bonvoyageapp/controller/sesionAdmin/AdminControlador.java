@@ -1,4 +1,4 @@
-package progiipoo.bonvoyageapp.controller;
+package progiipoo.bonvoyageapp.controller.sesionAdmin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -40,13 +40,12 @@ public class AdminControlador {
         }catch(IOException e){
             e.printStackTrace();
         }
-
     }
 
     @FXML
     void onCrearAlojamientoClick(ActionEvent event) {
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/crearAlojamiento.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/sesionAdmin/crearAlojamiento.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -74,7 +73,7 @@ public class AdminControlador {
     @FXML
     void onCrearSeguroDeViajeClick(ActionEvent event) {
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/crearSeguro.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/sesionAdmin/crearSeguro.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -88,7 +87,7 @@ public class AdminControlador {
     @FXML
     void onCrearVueloClick(ActionEvent event) {
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/crearVuelo.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/sesionAdmin/crearVuelo.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

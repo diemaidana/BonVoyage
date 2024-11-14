@@ -2,18 +2,13 @@ package progiipoo.bonvoyageapp.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONUsuarios;
 import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
 import progiipoo.bonvoyageapp.model.usuarios.Cliente;
-
-import java.io.IOException;
 
 public class RegistrarUsuarioController {
     @FXML
@@ -62,7 +57,7 @@ public class RegistrarUsuarioController {
     private TextField txtPais;
 
     @FXML
-    private TextField txtPassword;
+    private PasswordField txtPassword;
 
     @FXML
     private TextField txtProvincia;
@@ -72,15 +67,8 @@ public class RegistrarUsuarioController {
 
     @FXML
     void onCancelarClick(ActionEvent event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/inicio.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, 400,600);
-            stage.setScene(scene);
-            stage.show();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
+
     }
 
     @FXML
@@ -97,5 +85,7 @@ public class RegistrarUsuarioController {
         c.setPais(txtPais.getText());
 
         GestorUsuarios.agregarUsuario(c);
+        GestorJSONUsuarios.guardarUsuarios(GestorUsuarios.getUsuarios());
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml", c);
     }
 }

@@ -1,4 +1,4 @@
-package progiipoo.bonvoyageapp.controller;
+package progiipoo.bonvoyageapp.controller.sesionAdmin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,18 +6,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 
-public class crearAlojamiento {
+public class CrearAlojamientoController {
     @FXML
     private Button btnCancelar;
     @FXML
     private Button btnCrear;
     @FXML
-    private CheckBox btnFalse;
+    private CheckBox chkDesayunoSi;
     @FXML
-    private CheckBox btnTrue;
+    private CheckBox chkDesayunoNo;
     @FXML
     private Label lblCiudad;
     @FXML
@@ -45,11 +44,11 @@ public class crearAlojamiento {
     void onCrearClick(ActionEvent event) {
         Alojamiento a  = new Alojamiento();
         a.setPrecio(Double.parseDouble(txtPrecio.getText()));
-        if(btnTrue.isSelected()){
-            a.setDesayuno(btnTrue.isSelected());
+        if(chkDesayunoSi.isSelected()){
+            a.setDesayuno(chkDesayunoSi.isSelected());
         }
         else{
-            a.setDesayuno(btnFalse.isSelected());
+            a.setDesayuno(chkDesayunoNo.isSelected());
         }
         a.setCiudad(txtCiudad.getText());
         a.setProvincia(txtProvincia.getText());

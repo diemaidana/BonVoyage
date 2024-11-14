@@ -2,17 +2,12 @@ package progiipoo.bonvoyageapp.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import javafx.scene.control.*;
+import progiipoo.bonvoyageapp.controller.Exceptions.InicioSesionIncorrectoException;
+import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class InicioController {
@@ -26,51 +21,44 @@ public class InicioController {
     private Hyperlink hlkOlvidoPassword;
 
     @FXML
-    private TextField txtPassword;
+    private PasswordField txtPassword;
 
     @FXML
     private TextField txtUsuario;
 
-    private ArrayList<Usuario> usuarios;
-
     @FXML
     void onIniciarSesionClick(ActionEvent event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/sesionCliente.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.centerOnScreen();
-            stage.show();
-        }catch(IOException e){
+        String email = txtUsuario.getText();
+        String pass = txtPassword.getText();
+
+        try {
+            if (GestorUsuarios.iniciarSesion(email, pass)) {
+                Usuario u = GestorUsuarios.getUsuario(email);
+                if(u.getClass().equals(Cliente.class)){
+                    GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml", (Cliente) u);
+                }else{
+                    GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
+                }
+            } else {
+                throw new InicioSesionIncorrectoException("Usuario o password incorrecto.");
+            }
+        } catch (InicioSesionIncorrectoException e) {
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Error al iniciar sesion");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Usuario o password incorrecto. Intente nuevamente.");
+            alerta.show();
             e.printStackTrace();
         }
-        // INFORMAR QUE EMAIL O CONTRASENIA INCORRECTAS
     }
 
     @FXML
     void onOlvidoPasswordClick(ActionEvent event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/olvidoPassword.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, 400,600);
-            stage.setScene(scene);
-            stage.show();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/olvidoPassword.fxml");
     }
 
     @FXML
     void onRegistrarseClick(ActionEvent event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/registrarUsuario.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, 600,600);
-            stage.setScene(scene);
-            stage.show();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/registrarUsuario.fxml");
     }
 }

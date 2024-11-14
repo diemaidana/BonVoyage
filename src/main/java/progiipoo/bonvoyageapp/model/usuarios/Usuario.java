@@ -1,39 +1,34 @@
 package progiipoo.bonvoyageapp.model.usuarios;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+import progiipoo.bonvoyageapp.model.interfaces.IpuedeCargar;
+
 import java.util.Iterator;
 import java.util.Objects;
 
-public abstract class Usuario {
+public abstract class Usuario implements IpuedeCargar {
      private String email;
      private String dni;
      private String password;
-     private String telefono;
-     private String domicilio;
-     private String ciudad;
-     private String provincia;
-     private String pais;
+     private String nombre;
+     private String apellido;
+
 
     public Usuario() {
         email = "";
         password = "";
         dni = "";
-        telefono = "";
-        domicilio = "";
-        ciudad = "";
-        provincia = "";
-        pais = "";
+        nombre = "";
+        apellido = "";
     }
 
-    public Usuario(String email, String password, String dni, String telefono, String domicilio, String ciudad,
-                   String provincia, String pais) {
+    public Usuario(String email, String password, String dni, String nombre, String apellido) {
         this.email = email;
         this.password = password;
         this.dni = dni;
-        this.telefono = telefono;
-        this.domicilio = domicilio;
-        this.ciudad = ciudad;
-        this.provincia = provincia;
-        this.pais = pais;
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
 
     public String getEmail() {
@@ -48,26 +43,6 @@ public abstract class Usuario {
         return password;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public String getDomicilio() {
-        return domicilio;
-    }
-
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public String getProvincia() {
-        return provincia;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -78,26 +53,6 @@ public abstract class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setDomicilio(String domicilio) {
-        this.domicilio = domicilio;
-    }
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
     }
 
     @Override
@@ -119,11 +74,23 @@ public abstract class Usuario {
                 "email='" + email + '\'' +
                 ", dni='" + dni + '\'' +
                 ", password='" + password + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", domicilio='" + domicilio + '\'' +
-                ", ciudad='" + ciudad + '\'' +
-                ", provincia='" + provincia + '\'' +
-                ", pais='" + pais + '\'' +
                 '}';
     }
+
+    public JSONObject toJSON(){
+        JSONObject json = new JSONObject();
+        try{
+            json.put("email", email);
+            json.put("dni", dni);
+            json.put("password", password);
+            json.put("nombre", nombre);
+            json.put("apellido", apellido);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return json;
+    }
+
+    @Override
+    public abstract Boolean puedeCargar();
 }

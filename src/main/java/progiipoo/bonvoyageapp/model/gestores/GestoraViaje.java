@@ -1,29 +1,29 @@
 package progiipoo.bonvoyageapp.model.gestores;
 
 import progiipoo.bonvoyageapp.model.Contenedora;
-import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
-import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
-
 
 public class GestoraViaje {
-    private static Contenedora<ElementoViaje> lista = new Contenedora<ElementoViaje>();
-    public static void agregarAlojamiento(Alojamiento a) {
-        lista.agregarElemento(a);
+    private static Contenedora<ElementoViaje> lista = new Contenedora<>();
+
+    public static void leerElementosViaje(){
+        lista = GestorJSONElemenViaje.leerElemViaje();
     }
-    public static void eliminarAlojamiento(Alojamiento a){
-        lista.eliminarElemento(a);
+
+    public static void agregarElemento(ElementoViaje e) {
+        lista.agregarElemento(e);
     }
-    public static void contieneElemento(Alojamiento a){
-        lista.contieneElemento(a);
+
+    public static void eliminarElemento(ElementoViaje e){
+        lista.eliminarElemento(e);
     }
-    public static void agregarSeguro(SeguroViaje sv) {
-        lista.agregarElemento(sv);
+
+    public static void actualizarElemento(ElementoViaje e){
+        lista.eliminarElemento(e);
+        lista.actualizarElemento(e);
     }
-    public static void eliminarSeguro(SeguroViaje sv){
-        lista.eliminarElemento(sv);
-    }
-    public static void contieneElemento(SeguroViaje sv){
-        lista.contieneElemento(sv);
+
+    public static Boolean contieneElemento(ElementoViaje e){
+        return lista.contieneElemento(e);
     }
 }

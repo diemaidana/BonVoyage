@@ -29,15 +29,8 @@ public class OlvidoPasswordController {
 
     @FXML
     void onCancelarClick(ActionEvent event) {
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/inicio.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, 400,600);
-            stage.setScene(scene);
-            stage.show();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
+
     }
 
     @FXML
@@ -49,5 +42,6 @@ public class OlvidoPasswordController {
         alerta.setHeaderText(null);
         alerta.setContentText("Hemos enviado un mail con tu nueva contraseña.");
         alerta.show();
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
     }
 }
