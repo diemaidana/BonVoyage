@@ -107,23 +107,23 @@ public final class Alojamiento extends ElementoViaje {
     }
 
     public JSONObject toJSON(){
-        JSONObject obj = super.toJSON();
+        JSONObject json = super.toJSON();
         try{
-            obj.put("precio", this.getPrecio());
-            obj.put("cantDias", this.getCantDias());
-            obj.put("ubicacion", this.getUbicacion());
+            json.put("precio", this.getPrecio());
+            json.put("cantDias", this.getCantDias());
+            json.put("ubicacion", this.getUbicacion());
             JSONArray arregloPuntuacion = new JSONArray();
             for (Integer i : this.puntuacion) {
                 arregloPuntuacion.put(i);
             }
-            obj.put("puntuacion", arregloPuntuacion);
-            obj.put("desayuno", this.isDesayuno());
-            obj.put("ciudad", this.getCiudad());
-            obj.put("pais", this.getPais());
-            obj.put("provincia", this.getProvincia());
+            json.put("puntuacion", arregloPuntuacion);
+            json.put("desayuno", this.isDesayuno());
+            json.put("ciudad", this.getCiudad());
+            json.put("pais", this.getPais());
+            json.put("provincia", this.getProvincia());
         }catch (JSONException e){
             e.printStackTrace();
         }
-        return obj;
+        return json;
     }
 }

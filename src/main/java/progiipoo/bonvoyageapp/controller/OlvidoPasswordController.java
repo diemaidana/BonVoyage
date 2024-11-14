@@ -42,5 +42,6 @@ public class OlvidoPasswordController {
         alerta.setHeaderText(null);
         alerta.setContentText("Hemos enviado un mail con tu nueva contraseña.");
         alerta.show();
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/inicio.fxml");
     }
 }

@@ -37,11 +37,11 @@ public class GestorJSONUsuarios {
                 if(usuario.has("email") && usuario.has("dni") && usuario.has("password") && usuario.has("nombre") && usuario.has("apellido")){
                     if(usuario.has("legajo")){
                         Administrador a = new Administrador(usuario);
-                        usuarios.put(usuario.getString("email"), a);
+                        usuarios.put(a.getEmail(), a);
                     }
                     if(usuario.has("telefono") && usuario.has("domicilio") && usuario.has("ciudad") && usuario.has("provincia") && usuario.has("pais")){
                         Cliente c = new Cliente(usuario);
-                        usuarios.put(usuario.getString("email"), c);
+                        usuarios.put(c.getEmail(), c);
                     }
                 }
             }
