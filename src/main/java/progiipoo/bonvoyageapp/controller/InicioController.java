@@ -2,17 +2,11 @@ package progiipoo.bonvoyageapp.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 import progiipoo.bonvoyageapp.controller.Exceptions.InicioSesionIncorrectoException;
 import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class InicioController {
@@ -40,7 +34,7 @@ public class InicioController {
 
         try {
             if (GestorUsuarios.iniciarSesion(email, pass)) {
-                GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente.fxml");
+                GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml");
             } else {
                 throw new InicioSesionIncorrectoException("Usuario o password incorrecto.");
             }

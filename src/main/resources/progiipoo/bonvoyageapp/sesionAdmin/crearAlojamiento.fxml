@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.crearAlojamiento">
+<AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e8dbcb, #FFFFF1);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionAdmin.crearAlojamiento">
    <children>
       <GridPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="600.0">
          <columnConstraints>
@@ -26,7 +26,7 @@
          <children>
             <ImageView fitHeight="213.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
                <image>
-                  <Image url="@../../images/logoSinFondo.png" />
+                  <Image url="@../../../images/logoSinFondo.png" />
                </image>
             </ImageView>
             <GridPane GridPane.rowIndex="1">

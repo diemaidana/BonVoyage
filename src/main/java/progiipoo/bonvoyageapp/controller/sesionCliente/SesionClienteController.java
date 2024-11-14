@@ -1,4 +1,4 @@
-package progiipoo.bonvoyageapp.controller;
+package progiipoo.bonvoyageapp.controller.sesionCliente;
 
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 

@@ -7,11 +7,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import progiipoo.bonvoyageapp.controller.sesionCliente.SesionClienteController;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Queue;
 import java.util.ResourceBundle;
 
 public class GestorEscenas implements Initializable {

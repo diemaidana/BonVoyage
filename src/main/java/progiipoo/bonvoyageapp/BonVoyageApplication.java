@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class BonVoyageApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("inicio.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BonVoyageApplication.class.getResource("inicio.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 650);
         stage.setTitle("Bon Voyage!");
         stage.setScene(scene);

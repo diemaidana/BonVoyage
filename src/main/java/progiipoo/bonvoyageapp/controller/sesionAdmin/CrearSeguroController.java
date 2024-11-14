@@ -1,12 +1,12 @@
-package progiipoo.bonvoyageapp.controller;
+package progiipoo.bonvoyageapp.controller.sesionAdmin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
-import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 public class CrearSeguroController {
 
@@ -39,7 +39,7 @@ public class CrearSeguroController {
 
     @FXML
     void onCancelarClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/administrador.fxml");
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 
     @FXML
