@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 
 import java.io.IOException;
 
@@ -30,6 +32,7 @@ public class AdminControlador {
 
     @FXML
     void onCerrarSesionClick(ActionEvent event) {
+        GestorJSONElemenViaje.guardarElemViaje(GestoraViaje.getLista());
         try{
             Parent root = FXMLLoader.load(getClass().getResource("/progiipoo/bonvoyageapp/inicio.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

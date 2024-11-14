@@ -49,7 +49,6 @@ public final class Alojamiento extends ElementoViaje {
         this.provincia = obj.getString("provincia");
     }
 
-    // TE VOY A AGREGAR UN COMENTARIO PARA PODER PUSHEAR
     // SETTERS
     public void setCantDias(int cantDias) {
         this.cantDias = cantDias;

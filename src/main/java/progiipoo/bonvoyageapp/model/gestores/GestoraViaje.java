@@ -2,6 +2,10 @@ package progiipoo.bonvoyageapp.model.gestores;
 
 import progiipoo.bonvoyageapp.model.Contenedora;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
+import progiipoo.bonvoyageapp.model.viaje.Vuelo;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class GestoraViaje {
     private static Contenedora<ElementoViaje> lista = new Contenedora<>();
@@ -25,5 +29,9 @@ public class GestoraViaje {
 
     public static Boolean contieneElemento(ElementoViaje e){
         return lista.contieneElemento(e);
+    }
+
+    public static Contenedora<ElementoViaje> getLista() {
+        return lista;
     }
 }

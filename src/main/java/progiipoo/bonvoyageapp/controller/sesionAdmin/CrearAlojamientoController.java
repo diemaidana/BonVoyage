@@ -2,10 +2,11 @@ package progiipoo.bonvoyageapp.controller.sesionAdmin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import progiipoo.bonvoyageapp.controller.Exceptions.PrecioIncorrectoException;
+import progiipoo.bonvoyageapp.controller.GestorEscenas;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONElemenViaje;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 
 public class CrearAlojamientoController {
@@ -37,13 +38,29 @@ public class CrearAlojamientoController {
     private TextField txtProvincia;
     @FXML
     void onCancelarClick(ActionEvent event) {
-
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 
     @FXML
     void onCrearClick(ActionEvent event) {
         Alojamiento a  = new Alojamiento();
+        String precio = txtPrecio.getText();
+        try {
+            for (int i = 0; i < precio.length(); i++) {
+                if (!Character.isDigit(precio.charAt(i))) {
+                    throw new PrecioIncorrectoException("Error! ingrese un valor numerico.");
+                }
+            }
+        }catch (PrecioIncorrectoException e){
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Error!");
+            alerta.setHeaderText(null);
+            alerta.setContentText(e.getMessage());
+            alerta.show();
+        }
+
         a.setPrecio(Double.parseDouble(txtPrecio.getText()));
+
         if(chkDesayunoSi.isSelected()){
             a.setDesayuno(chkDesayunoSi.isSelected());
         }
@@ -54,5 +71,8 @@ public class CrearAlojamientoController {
         a.setProvincia(txtProvincia.getText());
         a.setPais(txtPais.getText());
 
+        GestoraViaje.agregarElemento(a);
+
+        GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 }
