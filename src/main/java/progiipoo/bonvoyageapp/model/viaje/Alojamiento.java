@@ -1,5 +1,9 @@
 package progiipoo.bonvoyageapp.model.viaje;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public final class Alojamiento extends ElementoViaje {
@@ -29,6 +33,22 @@ public final class Alojamiento extends ElementoViaje {
         this.pais = pais;
         this.provincia = provincia;
     }
+
+    public Alojamiento(JSONObject obj) {
+        super(obj.getDouble("precio"));
+        this.cantDias = obj.getInt("cantDias");
+        this.ubicacion = obj.getString("ubicacion");
+        this.puntuacion = new ArrayList<>();
+        JSONArray arregloPuntuacion = new JSONArray(obj.getString("puntuacion"));
+        for (int i = 0; i < arregloPuntuacion.length(); i++) {
+            puntuacion.add(arregloPuntuacion.getInt(i));
+        }
+        this.desayuno = obj.getBoolean("desayuno");
+        this.ciudad = obj.getString("ciudad");
+        this.pais = obj.getString("pais");
+        this.provincia = obj.getString("provincia");
+    }
+
     // TE VOY A AGREGAR UN COMENTARIO PARA PODER PUSHEAR
     // SETTERS
     public void setCantDias(int cantDias) {
@@ -77,11 +97,33 @@ public final class Alojamiento extends ElementoViaje {
     public String getProvincia() {
         return provincia;
     }
+
     public Integer getPuntuacion() {
         Integer promedio = 0;
         for (Integer i : this.puntuacion) {
             promedio += i;
         }
         return Math.round(promedio / puntuacion.size());
+    }
+
+    public JSONObject toJSON(){
+        JSONObject obj = super.toJSON();
+        try{
+            obj.put("precio", this.getPrecio());
+            obj.put("cantDias", this.getCantDias());
+            obj.put("ubicacion", this.getUbicacion());
+            JSONArray arregloPuntuacion = new JSONArray();
+            for (Integer i : this.puntuacion) {
+                arregloPuntuacion.put(i);
+            }
+            obj.put("puntuacion", arregloPuntuacion);
+            obj.put("desayuno", this.isDesayuno());
+            obj.put("ciudad", this.getCiudad());
+            obj.put("pais", this.getPais());
+            obj.put("provincia", this.getProvincia());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return obj;
     }
 }
