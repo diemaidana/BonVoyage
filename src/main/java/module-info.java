@@ -5,6 +5,7 @@ module progiipoo.bonvoyageapp {
     requires org.controlsfx.controls;
     requires org.json;
     requires jdk.jsobject;
+    requires java.desktop;
 
     opens progiipoo.bonvoyageapp to javafx.fxml;
     exports progiipoo.bonvoyageapp;
