@@ -10,7 +10,7 @@ import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 public class GestorJSONElemenViaje {
-    private static final String archivo = "elemViaje";
+    private static final String archivo = "/archivos/elemViaje.json";
 
     public static void guardarElemViaje(Contenedora<ElementoViaje> elementos){
         JSONObject json = new JSONObject();
