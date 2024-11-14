@@ -1,6 +1,6 @@
 package progiipoo.bonvoyageapp.model.MetodosDePago;
 
-public final class TarjetaCredito implements MetodoDePago {
+public final class TarjetaCredito {
     private String numeroTarjeta;
     private String nombreTitular;
     private String fechaExpiracion;
@@ -14,8 +14,8 @@ public final class TarjetaCredito implements MetodoDePago {
         this.codigoSeguridad = codigoSeguridad;
     }
 
-    @Override
-    public boolean procesarPago(double monto) {
+
+    private boolean procesarPago(double monto) {
         if (esValida()) {
             System.out.println("Procesando pago de " + monto + " con tarjeta de crédito " + numeroTarjeta);
             return true;
@@ -26,7 +26,7 @@ public final class TarjetaCredito implements MetodoDePago {
     }
 
     // Metodo para validar la tarjeta segun Luhn
-    private boolean esValida() {
+    public boolean esValida() {
         String numero = numeroTarjeta.replaceAll("\\s+", "");
 
         if (numero.length() !=16) {
