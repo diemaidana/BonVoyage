@@ -10,7 +10,7 @@ import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 public class GestorJSONElemenViaje {
-    private static final String archivo = "elemViaje";
+    private static final String archivo = "/archivos/elemViaje.json";
 
     public static void guardarElemViaje(Contenedora<ElementoViaje> elementos){
         JSONObject json = new JSONObject();
@@ -26,7 +26,7 @@ public class GestorJSONElemenViaje {
         OperacionesArchivos.guardar(json, archivo);
     }
 
-    public Contenedora<ElementoViaje> leerElemViaje(){
+    public static Contenedora<ElementoViaje> leerElemViaje(){
         Contenedora<ElementoViaje> elementos = new Contenedora<>();
         try{
             JSONObject json = new JSONObject(OperacionesArchivos.leer(archivo));

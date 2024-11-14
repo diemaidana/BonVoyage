@@ -8,6 +8,10 @@ import java.util.HashMap;
 public class GestorUsuarios {
     private static HashMap<String, Usuario> usuarios = new HashMap<>();
 
+    public static void leerUsuarios(){
+        usuarios = GestorJSONUsuarios.leerUsuarios();
+    }
+
     public static void agregarUsuario(Usuario u){
         usuarios.put(u.getEmail(), u);
     }

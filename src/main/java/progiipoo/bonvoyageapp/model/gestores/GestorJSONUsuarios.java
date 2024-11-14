@@ -10,7 +10,7 @@ import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import java.util.HashMap;
 
 public class GestorJSONUsuarios {
-    private final static String archivo = "usuarios.json";
+    private final static String archivo = "/archivos/usuarios.json";
 
     public static void guardarUsuarios(HashMap<String, Usuario> usuarios) {
         JSONObject json = new JSONObject();
