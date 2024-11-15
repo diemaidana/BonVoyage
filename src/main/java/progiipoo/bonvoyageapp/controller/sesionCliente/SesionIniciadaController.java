@@ -83,6 +83,7 @@ public class SesionIniciadaController extends SesionClienteController implements
     private TableView<Vuelo> tblVuelos;
 
     private ObservableList<Vuelo> vuelos;
+    private ObservableList<Alojamiento> alojamientos;
 
     public SesionIniciadaController() {
         super();
@@ -143,5 +144,14 @@ public class SesionIniciadaController extends SesionClienteController implements
         colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
 
         tblVuelos.setItems(vuelos);
+
+        alojamientos = FXCollections.observableList(GestoraViaje.getAlojamientos());
+        colCiudadAlojamiento.setCellValueFactory(new PropertyValueFactory<>("ciudad"));
+        colDesayunoAlojamiento.setCellValueFactory(new PropertyValueFactory<>("desayuno"));
+        colPrecioAlojamiento.setCellValueFactory((new PropertyValueFactory<>("precio")));
+        colPuntuacionAlojamiento.setCellValueFactory(new PropertyValueFactory<>("puntuacion"));
+        // jamas seteamos un valor de nombre.
+        colNombreAlojamiento.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colUbicacionAlojamiento.setCellValueFactory(new PropertyValueFactory<>("ubicacion"));
     }
 }

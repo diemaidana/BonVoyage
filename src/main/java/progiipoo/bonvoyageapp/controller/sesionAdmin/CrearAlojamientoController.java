@@ -12,30 +12,48 @@ import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 public class CrearAlojamientoController {
     @FXML
     private Button btnCancelar;
+
     @FXML
     private Button btnCrear;
-    @FXML
-    private CheckBox chkDesayunoSi;
+
     @FXML
     private CheckBox chkDesayunoNo;
+
+    @FXML
+    private CheckBox chkDesayunoSi;
+
     @FXML
     private Label lblCiudad;
+
     @FXML
     private Label lblDomicilio;
+
     @FXML
     private Label lblPais;
+
     @FXML
     private Label lblPassword;
+
     @FXML
     private Label lblProvincia;
+
     @FXML
     private TextField txtCiudad;
+
+    @FXML
+    private TextField txtNombre;
+
     @FXML
     private TextField txtPais;
+
     @FXML
     private TextField txtPrecio;
+
     @FXML
     private TextField txtProvincia;
+
+    @FXML
+    private TextField txtUbicacion;
     @FXML
     void onCancelarClick(ActionEvent event) {
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
@@ -70,9 +88,10 @@ public class CrearAlojamientoController {
         a.setCiudad(txtCiudad.getText());
         a.setProvincia(txtProvincia.getText());
         a.setPais(txtPais.getText());
+        a.setNombre(txtNombre.getText());
+        a.setUbicacion(txtUbicacion.getText());
 
         GestoraViaje.agregarElemento(a);
-
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionAdmin/administrador.fxml");
     }
 }
