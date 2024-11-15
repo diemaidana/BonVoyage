@@ -121,6 +121,7 @@ public final class Alojamiento extends ElementoViaje {
         try{
             json.put("precio", this.getPrecio());
             json.put("ubicacion", this.getUbicacion());
+            json.put("nombre", this.getNombre());
             JSONArray arregloPuntuacion = new JSONArray();
             for (Integer i : this.puntuacion) {
                 arregloPuntuacion.put(i);
