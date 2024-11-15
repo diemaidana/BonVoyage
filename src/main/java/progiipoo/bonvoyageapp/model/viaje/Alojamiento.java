@@ -50,6 +50,7 @@ public final class Alojamiento extends ElementoViaje {
         this.ciudad = obj.getString("ciudad");
         this.pais = obj.getString("pais");
         this.provincia = obj.getString("provincia");
+        this.nombre = obj.getString("nombre");
     }
 
     // SETTERS
@@ -139,4 +140,6 @@ public final class Alojamiento extends ElementoViaje {
         }
         return json;
     }
+
+
 }

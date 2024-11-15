@@ -131,11 +131,40 @@ public class SesionIniciadaController extends SesionClienteController implements
 
     @FXML
     void onComprarClick(ActionEvent event) {
+        Alojamiento alojamiento = null;
+        Vuelo vuelo = null;
+
+        if(tblVuelos.getSelectionModel().getSelectedItem() != null){
+            vuelo = tblVuelos.getSelectionModel().getSelectedItem();
+        }else if(tblAlojamiento.getSelectionModel().getSelectedItem() != null){
+            alojamiento = tblAlojamiento.getSelectionModel().getSelectedItem();
+        }
+
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        btnComprar.setDisable(true);
+
+        tblVuelos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if(newSelection != null){
+                tblAlojamiento.getSelectionModel().clearSelection();
+                btnComprar.setDisable(false);
+            }else if(tblAlojamiento.getSelectionModel().getSelectedItem() == null){
+                btnComprar.setDisable(true);
+            }
+        });
+
+        tblAlojamiento.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if(newSelection != null){
+                tblVuelos.getSelectionModel().clearSelection();
+                btnComprar.setDisable(false);
+            }else if(tblVuelos.getSelectionModel().getSelectedItem() == null){
+                btnComprar.setDisable(true);
+            }
+        });
+
         vuelos = FXCollections.observableList(GestoraViaje.getVuelosBaratos());
 
         colCiudadOrigen.setCellValueFactory(new PropertyValueFactory<>("ciudadOrigen"));
