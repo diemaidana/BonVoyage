@@ -146,12 +146,14 @@ public class SesionIniciadaController extends SesionClienteController implements
         tblVuelos.setItems(vuelos);
 
         alojamientos = FXCollections.observableList(GestoraViaje.getAlojamientos());
+
         colCiudadAlojamiento.setCellValueFactory(new PropertyValueFactory<>("ciudad"));
         colDesayunoAlojamiento.setCellValueFactory(new PropertyValueFactory<>("desayuno"));
         colPrecioAlojamiento.setCellValueFactory((new PropertyValueFactory<>("precio")));
         colPuntuacionAlojamiento.setCellValueFactory(new PropertyValueFactory<>("puntuacion"));
-        // jamas seteamos un valor de nombre.
         colNombreAlojamiento.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         colUbicacionAlojamiento.setCellValueFactory(new PropertyValueFactory<>("ubicacion"));
+
+        tblAlojamiento.setItems(alojamientos);
     }
 }

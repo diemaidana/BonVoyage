@@ -58,7 +58,7 @@ public class GestorJSONElemenViaje {
             for(int i = 0; i < arreglo.length(); i++){
                 JSONObject obj = arreglo.getJSONObject(i);
                 if(obj.has("precio")){
-                    if(obj.has("cantDias") && obj.has("ubicacion") && obj.has("puntuacion") && obj.has("desayuno") && obj.has("ciudad") && obj.has("provincia") && obj.has("pais")){
+                    if(obj.has("ubicacion") && obj.has("puntuacion") && obj.has("desayuno") && obj.has("ciudad") && obj.has("provincia") && obj.has("pais")){
                         Alojamiento a = new Alojamiento(obj);
                         elementos.agregarElemento(a);
                     }
