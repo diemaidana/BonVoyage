@@ -7,36 +7,39 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public final class Alojamiento extends ElementoViaje {
-    private int cantDias;
     private String ubicacion;
     private ArrayList<Integer> puntuacion;
     private boolean desayuno;
     protected String ciudad;
     protected String pais;
     protected String provincia;
+    private String nombre;
 
     // CONSTRUCTOR VACIO
     public Alojamiento() {
         super();
-        this.cantDias = 0;
         this.puntuacion = new ArrayList<>();
         this.desayuno = false;
+        this.ciudad = "";
+        this.pais = "";
+        this.provincia = "";
+        this.nombre = "";
+        this.ubicacion = "";
     }
     // CONSTRUCTOR
-    public Alojamiento(Double precio, int cantDias, String ubicacion, ArrayList<Integer> puntuacion, boolean desayuno, String ciudad, String pais, String provincia) {
+    public Alojamiento(Double precio, String ubicacion, ArrayList<Integer> puntuacion, boolean desayuno, String ciudad, String pais, String provincia, String nombre) {
         super(precio);
-        this.cantDias = cantDias;
         this.ubicacion = ubicacion;
         this.puntuacion = puntuacion;
         this.desayuno = desayuno;
         this.ciudad = ciudad;
         this.pais = pais;
         this.provincia = provincia;
+        this.nombre = nombre;
     }
 
     public Alojamiento(JSONObject obj) {
         super(obj.getDouble("precio"));
-        this.cantDias = obj.getInt("cantDias");
         this.ubicacion = obj.getString("ubicacion");
         this.puntuacion = new ArrayList<>();
         JSONArray arregloPuntuacion = new JSONArray(obj.getString("puntuacion"));
@@ -50,32 +53,36 @@ public final class Alojamiento extends ElementoViaje {
     }
 
     // SETTERS
-    public void setCantDias(int cantDias) {
-        this.cantDias = cantDias;
-    }
+
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
+
     public void setPuntuacion(Integer puntuacion) {
         this.puntuacion.add(puntuacion);
     }
+
     public void setDesayuno(boolean desayuno) {
         this.desayuno = desayuno;
     }
+
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
+
     public void setPais(String pais) {
         this.pais = pais;
     }
+
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
-    // GETTERS
 
-    public int getCantDias() {
-        return cantDias;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
+
+    // GETTERS
 
     public String getUbicacion() {
         return ubicacion;
@@ -105,11 +112,14 @@ public final class Alojamiento extends ElementoViaje {
         return Math.round(promedio / puntuacion.size());
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public JSONObject toJSON(){
         JSONObject json = super.toJSON();
         try{
             json.put("precio", this.getPrecio());
-            json.put("cantDias", this.getCantDias());
             json.put("ubicacion", this.getUbicacion());
             JSONArray arregloPuntuacion = new JSONArray();
             for (Integer i : this.puntuacion) {

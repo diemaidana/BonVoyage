@@ -4,8 +4,8 @@ import progiipoo.bonvoyageapp.model.Contenedora;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.time.LocalDate;
+import java.util.*;
 
 public class GestoraViaje {
     private static Contenedora<ElementoViaje> lista = new Contenedora<>();
@@ -35,11 +35,7 @@ public class GestoraViaje {
         return lista;
     }
 
-    public ArrayList<Vuelo> getVuelos(){
-        return getVuelosBaratos();
-    }
-
-    private ArrayList<Vuelo> getVuelosBaratos(){
+    public static List<Vuelo> getVuelosBaratos(){
         ArrayList<Vuelo> vuelos = new ArrayList<>();
         for(ElementoViaje e : lista){
             if(e.getClass().equals(Vuelo.class)){
@@ -47,6 +43,57 @@ public class GestoraViaje {
             }
         }
         Collections.sort(vuelos);
-        return (ArrayList<Vuelo>) vuelos.subList(0,2);
+        if(vuelos.size() < 3){
+            return vuelos.subList(0, vuelos.size());
+        }
+        return vuelos.subList(0,2);
+    }
+
+    public static Set<Vuelo> getVuelos(String ciudad, LocalDate fecha) {
+        HashSet<Vuelo> vuelos = new HashSet<>();
+        if(ciudad == null && fecha != null){
+            vuelos = getVuelosPorFecha(fecha);
+        }else if(ciudad != null && fecha == null){
+            vuelos = getVuelosPorCiudad(ciudad);
+        }else if(ciudad != null && fecha != null){
+            for(ElementoViaje e : lista){
+                if(e.getClass().equals(Vuelo.class)){
+                    if(((Vuelo) e).getCiudadDestino().equals(ciudad)){
+                        if(((Vuelo) e).getFechaVuelo().equals(fecha)){
+                            vuelos.add((Vuelo)e);
+                        }else if(((Vuelo) e).getFechaVuelo().getMonth().equals(fecha.getMonth())){
+                            vuelos.add((Vuelo)e);
+                        }
+                    }
+                }
+            }
+        }
+        return vuelos;
+    }
+
+    private static HashSet<Vuelo> getVuelosPorCiudad(String ciudad) {
+        HashSet<Vuelo> vuelos = new HashSet<>();
+        for(ElementoViaje e : lista){
+            if(e.getClass().equals(Vuelo.class)){
+                if(((Vuelo) e).getCiudadDestino().equals(ciudad)){
+                    vuelos.add((Vuelo)e);
+                }
+            }
+        }
+        return vuelos;
+    }
+
+    private static HashSet<Vuelo> getVuelosPorFecha(LocalDate fecha) {
+        HashSet<Vuelo> vuelos = new HashSet<>();
+        for(ElementoViaje e : lista){
+            if(e.getClass().equals(Vuelo.class)){
+                if(((Vuelo) e).getFechaVuelo().equals(fecha)){
+                    vuelos.add((Vuelo)e);
+                }else if(((Vuelo) e).getFechaVuelo().getMonth().equals(fecha.getMonth())){
+                    vuelos.add((Vuelo)e);
+                }
+            }
+        }
+        return vuelos;
     }
 }

@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionCliente.SesionIniciadaController">
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progiipoo.bonvoyageapp.controller.sesionCliente.SesionIniciadaController">
    <children>
       <GridPane prefHeight="720.0" prefWidth="1280.0">
          <columnConstraints>
@@ -43,22 +43,33 @@
                <children>
                   <TableView fx:id="tblVuelos" prefHeight="200.0" prefWidth="200.0">
                      <columns>
-                        <TableColumn fx:id="colVuelo" prefWidth="75.0" text="Vuelo" />
-                        <TableColumn fx:id="colOrigenVuelo" prefWidth="75.0" text="Origen" />
-                        <TableColumn fx:id="colDestinoVuelo" prefWidth="75.0" text="Destino" />
-                        <TableColumn fx:id="colPrecioVuelo" prefWidth="75.0" text="Precio" />
+                        <TableColumn fx:id="colCiudadOrigen" prefWidth="75.0" text="Ciudad Origen" />
+                        <TableColumn fx:id="colCiudadDestino" prefWidth="75.0" text="Ciudad Destino" />
+                        <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+                        <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
                      </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
                   <TableView fx:id="tblAlojamiento" prefHeight="200.0" prefWidth="200.0">
                      <columns>
-                        <TableColumn fx:id="colAlojamiento" prefWidth="75.0" text="Alojamiento" />
-                        <TableColumn fx:id="colOrigenAlojamiento" prefWidth="75.0" text="Origen" />
-                        <TableColumn fx:id="colDestinoAlojamiento" prefWidth="75.0" text="Destino" />
+                        <TableColumn fx:id="colNombreAlojamiento" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="colUbicacionAlojamiento" prefWidth="75.0" text="Ubicacion" />
+                        <TableColumn fx:id="colCiudadAlojamiento" prefWidth="75.0" text="Ciudad" />
+                        <TableColumn fx:id="colPuntuacionAlojamiento" prefWidth="75.0" text="Puntuacion" />
+                        <TableColumn fx:id="colDesayunoAlojamiento" prefWidth="75.0" text="Desayuno" />
                         <TableColumn fx:id="colPrecioAlojamiento" prefWidth="75.0" text="Precio" />
                      </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
                   <Button fx:id="btnComprar" mnemonicParsing="false" onAction="#onComprarClick" prefWidth="200.0" text="Comprar" />
                </children>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>

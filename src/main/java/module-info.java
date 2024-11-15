@@ -15,4 +15,5 @@ module progiipoo.bonvoyageapp {
     opens progiipoo.bonvoyageapp.controller.sesionCliente to javafx.fxml;
     exports progiipoo.bonvoyageapp.controller.sesionAdmin;
     opens progiipoo.bonvoyageapp.controller.sesionAdmin to javafx.fxml;
+    opens progiipoo.bonvoyageapp.model.viaje to javafx.base;
 }

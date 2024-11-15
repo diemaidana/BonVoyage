@@ -4,14 +4,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public final class Vuelo extends ElementoViaje{
-    protected String ciudadOrigen;
-    protected String paisOrigen;
-    protected String provinciaOrigen;
-    protected String ciudadDestino;
-    protected String paisDestino;
-    protected String provinciaDestino;
+    private String ciudadOrigen;
+    private String paisOrigen;
+    private String provinciaOrigen;
+    private String ciudadDestino;
+    private String paisDestino;
+    private String provinciaDestino;
     private LocalDate fechaVuelo;
 
     // CONSTRUCTORES
@@ -70,24 +71,32 @@ public final class Vuelo extends ElementoViaje{
         this.fechaVuelo = fechaVuelo;
     }
     // GETTERS
+
+
     public String getCiudadOrigen() {
         return ciudadOrigen;
     }
+
     public String getPaisOrigen() {
         return paisOrigen;
     }
+
     public String getProvinciaOrigen() {
         return provinciaOrigen;
     }
+
     public String getCiudadDestino() {
         return ciudadDestino;
     }
+
     public String getPaisDestino() {
         return paisDestino;
     }
+
     public String getProvinciaDestino() {
         return provinciaDestino;
     }
+
     public LocalDate getFechaVuelo() {
         return fechaVuelo;
     }
@@ -108,4 +117,30 @@ public final class Vuelo extends ElementoViaje{
         return obj;
     }
 
+    @Override
+    public String toString() {
+        return "Vuelo{" +
+                "ciudadOrigen='" + ciudadOrigen + '\'' +
+                ", paisOrigen='" + paisOrigen + '\'' +
+                ", provinciaOrigen='" + provinciaOrigen + '\'' +
+                ", ciudadDestino='" + ciudadDestino + '\'' +
+                ", paisDestino='" + paisDestino + '\'' +
+                ", provinciaDestino='" + provinciaDestino + '\'' +
+                ", precio=" + precio +
+                ", fechaVuelo=" + fechaVuelo +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vuelo vuelo = (Vuelo) o;
+        return Objects.equals(ciudadOrigen, vuelo.ciudadOrigen) && Objects.equals(paisOrigen, vuelo.paisOrigen) && Objects.equals(provinciaOrigen, vuelo.provinciaOrigen) && Objects.equals(ciudadDestino, vuelo.ciudadDestino) && Objects.equals(paisDestino, vuelo.paisDestino) && Objects.equals(provinciaDestino, vuelo.provinciaDestino) && Objects.equals(fechaVuelo, vuelo.fechaVuelo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ciudadOrigen, paisOrigen, provinciaOrigen, ciudadDestino, paisDestino, provinciaDestino, fechaVuelo);
+    }
 }

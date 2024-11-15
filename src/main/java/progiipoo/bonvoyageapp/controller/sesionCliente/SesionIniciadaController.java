@@ -1,5 +1,7 @@
 package progiipoo.bonvoyageapp.controller.sesionCliente;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
@@ -17,10 +20,11 @@ import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 import java.lang.reflect.Array;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class SesionIniciadaController extends SesionClienteController {
+public class SesionIniciadaController extends SesionClienteController implements Initializable {
     @FXML
     private Button btnAlojamiento;
 
@@ -43,34 +47,42 @@ public class SesionIniciadaController extends SesionClienteController {
     private Button btnVuelos;
 
     @FXML
-    private TableColumn colAlojamiento;
+    private TableColumn colCiudadAlojamiento;
 
     @FXML
-    private TableColumn colDestinoAlojamiento;
+    private TableColumn<Vuelo, String> colCiudadDestino;
 
     @FXML
-    private TableColumn colDestinoVuelo;
+    private TableColumn<Vuelo, String> colCiudadOrigen;
 
     @FXML
-    private TableColumn colOrigenAlojamiento;
+    private TableColumn colDesayunoAlojamiento;
 
     @FXML
-    private TableColumn colOrigenVuelo;
+    private TableColumn<Vuelo, LocalDate> colFecha;
+
+    @FXML
+    private TableColumn colNombreAlojamiento;
+
+    @FXML
+    private TableColumn<Vuelo, String> colPrecio;
+
+    @FXML
+    private TableColumn colPuntuacionAlojamiento;
+
+    @FXML
+    private TableColumn colUbicacionAlojamiento;
 
     @FXML
     private TableColumn colPrecioAlojamiento;
 
     @FXML
-    private TableColumn colPrecioVuelo;
-
-    @FXML
-    private TableColumn colVuelo;
+    private TableView<Alojamiento> tblAlojamiento;
 
     @FXML
     private TableView<Vuelo> tblVuelos;
 
-    @FXML
-    private TableView<Alojamiento> tblAlojamiento;
+    private ObservableList<Vuelo> vuelos;
 
     public SesionIniciadaController() {
         super();
@@ -119,5 +131,17 @@ public class SesionIniciadaController extends SesionClienteController {
     @FXML
     void onComprarClick(ActionEvent event) {
 
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        vuelos = FXCollections.observableList(GestoraViaje.getVuelosBaratos());
+
+        colCiudadOrigen.setCellValueFactory(new PropertyValueFactory<>("ciudadOrigen"));
+        colCiudadDestino.setCellValueFactory(new PropertyValueFactory<>("ciudadDestino"));
+        colFecha.setCellValueFactory(new PropertyValueFactory<>("fechaVuelo"));
+        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+
+        tblVuelos.setItems(vuelos);
     }
 }

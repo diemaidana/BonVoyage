@@ -1,31 +1,13 @@
 {"elementosViaje": [
     {
-        "precio": 260,
+        "tipoAsistencia": "Oro",
+        "precio": 120,
         "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "San Jose",
-        "desayuno": true,
-        "provincia": "San Jose",
-        "pais": "Costa Rica"
-    },
-    {
-        "precio": 100,
-        "provinciaOrigen": "Region Metropolitana",
-        "ciudadOrigen": "Santiago ",
-        "provinciaDestino": "Lima",
-        "paisOrigen": "Chile",
-        "paisDestino": "Peru",
-        "fechaVuelo": "2024-11-18",
-        "ciudadDestino": "Lima"
-    },
-    {
-        "precio": 600,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Honolulu",
-        "desayuno": true,
-        "provincia": "Hawaii",
-        "pais": "Estados Unidos"
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Medellin",
+        "medicamentos": "40000"
     },
     {
         "precio": 100,
@@ -38,43 +20,14 @@
         "ciudadDestino": "Santiago"
     },
     {
-        "precio": 350,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Atenas",
-        "desayuno": true,
-        "provincia": "Atica",
-        "pais": "Grecia"
-    },
-    {
         "tipoAsistencia": "Oro",
         "precio": 120,
         "cantDias": 0,
         "asistenciaMedica": "50000",
         "perdidaEquipaje": "2000",
         "vueloDemorado": "1500",
-        "destino": "Londres",
-        "medicamentos": "40000"
-    },
-    {
-        "precio": 160,
-        "provinciaOrigen": "California",
-        "ciudadOrigen": "Los Angeles",
-        "provinciaDestino": "Hawaii",
-        "paisOrigen": "Estados Unidos",
-        "paisDestino": "Estados Unidos",
-        "fechaVuelo": "2025-07-18",
-        "ciudadDestino": "Honolulu"
-    },
-    {
-        "precio": 300,
-        "provinciaOrigen": "Queensland",
-        "ciudadOrigen": "Brisbane",
-        "provinciaDestino": "Auckland",
-        "paisOrigen": "Australia",
-        "paisDestino": "Nueva Zelanda",
-        "fechaVuelo": "2025-08-20",
-        "ciudadDestino": "Auckland"
+        "destino": "Madrid",
+        "medicamentos": "20000"
     },
     {
         "precio": 140,
@@ -87,108 +40,14 @@
         "ciudadDestino": "Munich"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Valencia",
-        "medicamentos": "40000"
-    },
-    {
-        "precio": 200,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Los Angeles",
-        "desayuno": true,
-        "provincia": "California",
-        "pais": "Estados Unidos"
-    },
-    {
-        "precio": 160,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Santiago",
-        "desayuno": true,
-        "provincia": "Valparaiso",
-        "pais": "Chile"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Auckland",
-        "medicamentos": "20000"
-    },
-    {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Munich",
-        "medicamentos": "40000"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "10000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "600",
-        "destino": "Casablanca",
-        "medicamentos": "2000"
-    },
-    {
-        "precio": 400,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Munich",
-        "desayuno": true,
-        "provincia": "Baviera",
-        "pais": "Alemania"
-    },
-    {
-        "precio": 150,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Bangkok",
-        "desayuno": true,
-        "provincia": "Bankok",
-        "pais": "Tailandia"
-    },
-    {
-        "precio": 150,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Lima",
-        "desayuno": true,
-        "provincia": "Lima",
-        "pais": "Peru"
-    },
-    {
-        "precio": 190,
-        "provinciaOrigen": "Andalucia",
-        "ciudadOrigen": "Sevilla",
-        "provinciaDestino": "Casablanca-Settat",
-        "paisOrigen": "España",
-        "paisDestino": "Marruecos",
-        "fechaVuelo": "2025-05-08",
-        "ciudadDestino": "Casablanca"
-    },
-    {
-        "precio": 260,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Ciudad de Mexico",
-        "desayuno": true,
-        "provincia": "Ciudad de Mexico",
-        "pais": "Mexico"
+        "precio": 180,
+        "provinciaOrigen": "Ontario",
+        "ciudadOrigen": "Toronto",
+        "provinciaDestino": "Ciudad de Mexico",
+        "paisOrigen": "Canada",
+        "paisDestino": "Mexico",
+        "fechaVuelo": "2025-03-20",
+        "ciudadDestino": "Ciudad de Mexico"
     },
     {
         "precio": 115,
@@ -201,111 +60,24 @@
         "ciudadDestino": "Genova"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Medellin",
-        "medicamentos": "40000"
-    },
-    {
-        "precio": 120,
-        "provinciaOrigen": "Ciudad de Mexico",
-        "ciudadOrigen": "Ciudad de Mexico",
-        "provinciaDestino": "California",
-        "paisOrigen": "Mexico",
-        "paisDestino": "Estados Unidos",
-        "fechaVuelo": "2024-12-11",
-        "ciudadDestino": "Los Angeles"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "400",
-        "destino": "Lima",
-        "medicamentos": "5000"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Paris",
-        "medicamentos": "10000"
-    },
-    {
         "precio": 160,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Madrid",
-        "desayuno": true,
-        "provincia": "Madrid",
-        "pais": "España"
+        "provinciaOrigen": "Nueva Gales del Sur",
+        "ciudadOrigen": "Sidney",
+        "provinciaDestino": "Bangkok",
+        "paisOrigen": "Australia",
+        "paisDestino": "Tailandia",
+        "fechaVuelo": "2025-01-09",
+        "ciudadDestino": "Bangkok"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Honolulu",
-        "medicamentos": "40000"
-    },
-    {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Madrid",
-        "medicamentos": "20000"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "900",
-        "destino": "Tokio",
-        "medicamentos": "10000"
-    },
-    {
-        "precio": 340,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Londres",
-        "desayuno": true,
-        "provincia": "Inglaterra",
-        "pais": "Reino Unido"
-    },
-    {
-        "precio": 250,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Genova",
-        "desayuno": true,
-        "provincia": "Liguria",
-        "pais": "Italia"
-    },
-    {
-        "precio": 100,
-        "provinciaOrigen": "Arequipa",
-        "ciudadOrigen": "Arequipa",
-        "provinciaDestino": "Antioquia",
-        "paisOrigen": "Peru",
-        "paisDestino": "Colombia",
-        "fechaVuelo": "2025-03-27",
-        "ciudadDestino": "Medellin"
+        "precio": 170,
+        "provinciaOrigen": "Escocia",
+        "ciudadOrigen": "Edimburgo",
+        "provinciaDestino": "Comunidad Valenciana",
+        "paisOrigen": "Reino Unido",
+        "paisDestino": "España",
+        "fechaVuelo": "2025-04-22",
+        "ciudadDestino": "Valencia"
     },
     {
         "tipoAsistencia": "Plata",
@@ -328,149 +100,24 @@
         "medicamentos": "20000"
     },
     {
-        "precio": 260,
-        "provinciaOrigen": "Renania del Norte-Westfalia",
-        "ciudadOrigen": "Dusseldorf",
-        "provinciaDestino": "Atica",
-        "paisOrigen": "Alemania",
-        "paisDestino": "Grecia",
-        "fechaVuelo": "2025-03-29",
-        "ciudadDestino": "Atenas"
-    },
-    {
-        "precio": 170,
-        "provinciaOrigen": "Escocia",
-        "ciudadOrigen": "Edimburgo",
-        "provinciaDestino": "Comunidad Valenciana",
-        "paisOrigen": "Reino Unido",
-        "paisDestino": "España",
-        "fechaVuelo": "2025-04-22",
-        "ciudadDestino": "Valencia"
-    },
-    {
         "tipoAsistencia": "Platino",
         "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Atenas",
-        "medicamentos": "10000"
-    },
-    {
-        "precio": 320,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Roma",
-        "desayuno": true,
-        "provincia": "Lazio",
-        "pais": "Italia"
-    },
-    {
-        "precio": 360,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Casablanca",
-        "desayuno": true,
-        "provincia": "Casablanca-Settat",
-        "pais": "Marruecos"
-    },
-    {
-        "precio": 250,
-        "provinciaOrigen": "Texas",
-        "ciudadOrigen": "Houston",
-        "provinciaDestino": "San Jose",
-        "paisOrigen": "Estados Unidos",
-        "paisDestino": "Costa Rica",
-        "fechaVuelo": "2025-05-14",
-        "ciudadDestino": "San Jose"
-    },
-    {
-        "precio": 260,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Quito",
-        "desayuno": true,
-        "provincia": "Pichincha",
-        "pais": "Ecuador"
-    },
-    {
-        "precio": 310,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Medellin",
-        "desayuno": true,
-        "provincia": "Antioquia",
-        "pais": "Colombia"
-    },
-    {
-        "precio": 500,
-        "provinciaOrigen": "Nueva York",
-        "ciudadOrigen": "Nueva York",
-        "provinciaDestino": "Tokio",
-        "paisOrigen": "Estados Unidos",
-        "paisDestino": "Japon",
-        "fechaVuelo": "2024-11-16",
-        "ciudadDestino": "Tokio"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Santiago",
-        "medicamentos": "5000"
-    },
-    {
-        "precio": 190,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Valencia",
-        "desayuno": true,
-        "provincia": "Comunidad Valenciana",
-        "pais": "España"
-    },
-    {
-        "precio": 160,
-        "provinciaOrigen": "Nueva Gales del Sur",
-        "ciudadOrigen": "Sidney",
-        "provinciaDestino": "Bangkok",
-        "paisOrigen": "Australia",
-        "paisDestino": "Tailandia",
-        "fechaVuelo": "2025-01-09",
-        "ciudadDestino": "Bangkok"
-    },
-    {
-        "precio": 190,
-        "provinciaOrigen": "Cundinamarca",
-        "ciudadOrigen": "Bogota",
-        "provinciaDestino": "Ile de France",
-        "paisOrigen": "Colombia",
-        "paisDestino": "Francia",
-        "fechaVuelo": "2024-12-12",
-        "ciudadDestino": "Paris"
+        "asistenciaMedica": "10000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "600",
+        "destino": "Casablanca",
+        "medicamentos": "2000"
     },
     {
         "tipoAsistencia": "Oro",
         "precio": 120,
         "cantDias": 0,
         "asistenciaMedica": "50000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Los Angeles",
-        "medicamentos": "15000"
-    },
-    {
-        "precio": 110,
-        "provinciaOrigen": "Callao",
-        "ciudadOrigen": "Lima",
-        "provinciaDestino": "Pichincha",
-        "paisOrigen": "Peru",
-        "paisDestino": "Ecuador",
-        "fechaVuelo": "2024-12-13",
-        "ciudadDestino": "Quito"
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Honolulu",
+        "medicamentos": "40000"
     },
     {
         "tipoAsistencia": "Plata",
@@ -483,43 +130,14 @@
         "medicamentos": "20000"
     },
     {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
+        "tipoAsistencia": "Oro",
+        "precio": 120,
         "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Quito",
-        "medicamentos": "20000"
-    },
-    {
-        "precio": 280,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Auckland",
-        "desayuno": true,
-        "provincia": "Auckland",
-        "pais": "Nueva Zelanda"
-    },
-    {
-        "precio": 210,
-        "provinciaOrigen": "Sao Paulo",
-        "ciudadOrigen": "Sao Paulo",
-        "provinciaDestino": "Lazio",
-        "paisOrigen": "Brasil",
-        "paisDestino": "Italia",
-        "fechaVuelo": "2024-12-21",
-        "ciudadDestino": "Roma"
-    },
-    {
-        "precio": 160,
-        "provinciaOrigen": "Buenos Aires",
-        "ciudadOrigen": "Ciudad de Buenos Aires",
-        "provinciaDestino": "Madrid",
-        "paisOrigen": "Argentina",
-        "paisDestino": "España",
-        "fechaVuelo": "2024-11-27",
-        "ciudadDestino": "Madrid"
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Londres",
+        "medicamentos": "40000"
     },
     {
         "tipoAsistencia": "Platino",
@@ -528,7 +146,7 @@
         "asistenciaMedica": "20000",
         "perdidaEquipaje": "1000",
         "vueloDemorado": "500",
-        "destino": "San Jose",
+        "destino": "Atenas",
         "medicamentos": "10000"
     },
     {
@@ -542,6 +160,216 @@
         "medicamentos": "20000"
     },
     {
+        "tipoAsistencia": "Oro",
+        "precio": 120,
+        "cantDias": 0,
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Valencia",
+        "medicamentos": "40000"
+    },
+    {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "900",
+        "destino": "Tokio",
+        "medicamentos": "10000"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Quito",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 250,
+        "provinciaOrigen": "Texas",
+        "ciudadOrigen": "Houston",
+        "provinciaDestino": "San Jose",
+        "paisOrigen": "Estados Unidos",
+        "paisDestino": "Costa Rica",
+        "fechaVuelo": "2025-05-14",
+        "ciudadDestino": "San Jose"
+    },
+    {
+        "tipoAsistencia": "Oro",
+        "precio": 120,
+        "cantDias": 0,
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Munich",
+        "medicamentos": "40000"
+    },
+    {
+        "precio": 100,
+        "provinciaOrigen": "Region Metropolitana",
+        "ciudadOrigen": "Santiago ",
+        "provinciaDestino": "Lima",
+        "paisOrigen": "Chile",
+        "paisDestino": "Peru",
+        "fechaVuelo": "2024-11-18",
+        "ciudadDestino": "Lima"
+    },
+    {
+        "precio": 120,
+        "provinciaOrigen": "Ciudad de Mexico",
+        "ciudadOrigen": "Ciudad de Mexico",
+        "provinciaDestino": "California",
+        "paisOrigen": "Mexico",
+        "paisDestino": "Estados Unidos",
+        "fechaVuelo": "2024-12-11",
+        "ciudadDestino": "Los Angeles"
+    },
+    {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "400",
+        "destino": "Lima",
+        "medicamentos": "5000"
+    },
+    {
+        "tipoAsistencia": "Oro",
+        "precio": 120,
+        "cantDias": 0,
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Los Angeles",
+        "medicamentos": "15000"
+    },
+    {
+        "precio": 190,
+        "provinciaOrigen": "Andalucia",
+        "ciudadOrigen": "Sevilla",
+        "provinciaDestino": "Casablanca-Settat",
+        "paisOrigen": "España",
+        "paisDestino": "Marruecos",
+        "fechaVuelo": "2025-05-08",
+        "ciudadDestino": "Casablanca"
+    },
+    {
+        "precio": 160,
+        "provinciaOrigen": "California",
+        "ciudadOrigen": "Los Angeles",
+        "provinciaDestino": "Hawaii",
+        "paisOrigen": "Estados Unidos",
+        "paisDestino": "Estados Unidos",
+        "fechaVuelo": "2025-07-18",
+        "ciudadDestino": "Honolulu"
+    },
+    {
+        "precio": 500,
+        "provinciaOrigen": "Nueva York",
+        "ciudadOrigen": "Nueva York",
+        "provinciaDestino": "Tokio",
+        "paisOrigen": "Estados Unidos",
+        "paisDestino": "Japon",
+        "fechaVuelo": "2024-11-16",
+        "ciudadDestino": "Tokio"
+    },
+    {
+        "precio": 210,
+        "provinciaOrigen": "Sao Paulo",
+        "ciudadOrigen": "Sao Paulo",
+        "provinciaDestino": "Lazio",
+        "paisOrigen": "Brasil",
+        "paisDestino": "Italia",
+        "fechaVuelo": "2024-12-21",
+        "ciudadDestino": "Roma"
+    },
+    {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Santiago",
+        "medicamentos": "5000"
+    },
+    {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "San Jose",
+        "medicamentos": "10000"
+    },
+    {
+        "precio": 110,
+        "provinciaOrigen": "Callao",
+        "ciudadOrigen": "Lima",
+        "provinciaDestino": "Pichincha",
+        "paisOrigen": "Peru",
+        "paisDestino": "Ecuador",
+        "fechaVuelo": "2024-12-13",
+        "ciudadDestino": "Quito"
+    },
+    {
+        "precio": 160,
+        "provinciaOrigen": "Buenos Aires",
+        "ciudadOrigen": "Ciudad de Buenos Aires",
+        "provinciaDestino": "Madrid",
+        "paisOrigen": "Argentina",
+        "paisDestino": "España",
+        "fechaVuelo": "2024-11-27",
+        "ciudadDestino": "Madrid"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Auckland",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 260,
+        "provinciaOrigen": "Renania del Norte-Westfalia",
+        "ciudadOrigen": "Dusseldorf",
+        "provinciaDestino": "Atica",
+        "paisOrigen": "Alemania",
+        "paisDestino": "Grecia",
+        "fechaVuelo": "2025-03-29",
+        "ciudadDestino": "Atenas"
+    },
+    {
+        "precio": 300,
+        "provinciaOrigen": "Queensland",
+        "ciudadOrigen": "Brisbane",
+        "provinciaDestino": "Auckland",
+        "paisOrigen": "Australia",
+        "paisDestino": "Nueva Zelanda",
+        "fechaVuelo": "2025-08-20",
+        "ciudadDestino": "Auckland"
+    },
+    {
+        "precio": 190,
+        "provinciaOrigen": "Cundinamarca",
+        "ciudadOrigen": "Bogota",
+        "provinciaDestino": "Ile de France",
+        "paisOrigen": "Colombia",
+        "paisDestino": "Francia",
+        "fechaVuelo": "2024-12-12",
+        "ciudadDestino": "Paris"
+    },
+    {
         "precio": 200,
         "provinciaOrigen": "Cataluña",
         "ciudadOrigen": "Barcelona",
@@ -552,25 +380,6 @@
         "ciudadDestino": "Londres"
     },
     {
-        "precio": 180,
-        "provinciaOrigen": "Ontario",
-        "ciudadOrigen": "Toronto",
-        "provinciaDestino": "Ciudad de Mexico",
-        "paisOrigen": "Canada",
-        "paisDestino": "Mexico",
-        "fechaVuelo": "2025-03-20",
-        "ciudadDestino": "Ciudad de Mexico"
-    },
-    {
-        "precio": 410,
-        "cantDias": 0,
-        "puntuacion": [],
-        "ciudad": "Tokio",
-        "desayuno": true,
-        "provincia": "Tokio",
-        "pais": "Japon"
-    },
-    {
         "tipoAsistencia": "Plata",
         "precio": 80,
         "cantDias": 0,
@@ -579,5 +388,25 @@
         "vueloDemorado": "900",
         "destino": "Bangkok",
         "medicamentos": "20000"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Paris",
+        "medicamentos": "10000"
+    },
+    {
+        "precio": 100,
+        "provinciaOrigen": "Arequipa",
+        "ciudadOrigen": "Arequipa",
+        "provinciaDestino": "Antioquia",
+        "paisOrigen": "Peru",
+        "paisDestino": "Colombia",
+        "fechaVuelo": "2025-03-27",
+        "ciudadDestino": "Medellin"
     }
 ]}
