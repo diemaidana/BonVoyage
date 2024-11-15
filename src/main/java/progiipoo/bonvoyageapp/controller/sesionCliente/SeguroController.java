@@ -1,15 +1,25 @@
 package progiipoo.bonvoyageapp.controller.sesionCliente;
 
+import javafx.beans.Observable;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
+import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 
-public class SeguroController extends SesionClienteController{
+import java.net.URL;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ResourceBundle;
+
+public class SeguroController extends SesionClienteController {
     @FXML
     private Button btnAlojamiento;
 
@@ -38,22 +48,22 @@ public class SeguroController extends SesionClienteController{
     private Button btnVuelos;
 
     @FXML
-    private TableColumn<?, ?> colAsistenciaMedica;
+    private TableColumn<SeguroViaje, String> colAsistenciaMedica;
 
     @FXML
-    private TableColumn<?, ?> colCantidadDias;
+    private TableColumn<SeguroController, Integer> colCantidadDias;
 
     @FXML
-    private TableColumn<?, ?> colEquipaje;
+    private TableColumn<SeguroViaje, String> colEquipaje;
 
     @FXML
-    private TableColumn<?, ?> colMedicamentos;
+    private TableColumn<SeguroViaje, String> colMedicamentos;
 
     @FXML
-    private TableColumn<?, ?> colTipoAsistencia;
+    private TableColumn<SeguroViaje, String> colTipoAsistencia;
 
     @FXML
-    private TableColumn<?, ?> colVueloDemorado;
+    private TableColumn<SeguroViaje, String> colVueloDemorado;
 
     @FXML
     private DatePicker partida;
@@ -62,7 +72,10 @@ public class SeguroController extends SesionClienteController{
     private DatePicker regreso;
 
     @FXML
-    private TableView<?> tblVuelos;
+    private TableView<SeguroViaje> tblSeguros;
+
+    @FXML
+    private TextField txtDestino;
 
     public SeguroController() {
         super();
@@ -79,7 +92,19 @@ public class SeguroController extends SesionClienteController{
 
     @FXML
     void onBuscarClick(ActionEvent event) {
+        String destino = txtDestino.getText();
+        Integer cantDias = (int) ChronoUnit.DAYS.between(regreso.getValue(), partida.getValue());
 
+        ObservableList<SeguroViaje> seguros = FXCollections.observableArrayList(GestoraViaje.getSeguros(destino));
+
+        colTipoAsistencia.setCellValueFactory(new PropertyValueFactory<>("tipoAsistencia"));
+        colCantidadDias.setCellValueFactory(cellData -> {return new SimpleIntegerProperty(cantDias).asObject();});
+        colAsistenciaMedica.setCellValueFactory(new PropertyValueFactory<>("asistenciaMedica"));
+        colMedicamentos.setCellValueFactory(new PropertyValueFactory<>("medicamentos"));
+        colEquipaje.setCellValueFactory(new PropertyValueFactory<>("perdidaEquipaje"));
+        colVueloDemorado.setCellValueFactory(new PropertyValueFactory<>("vueloDemorado"));
+
+        tblSeguros.setItems(seguros);
     }
 
     @FXML

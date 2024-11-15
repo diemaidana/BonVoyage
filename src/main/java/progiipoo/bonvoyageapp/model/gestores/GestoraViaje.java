@@ -1,7 +1,9 @@
 package progiipoo.bonvoyageapp.model.gestores;
 
+import javafx.collections.ObservableList;
 import progiipoo.bonvoyageapp.model.Contenedora;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
+import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 import java.time.LocalDate;
@@ -95,5 +97,17 @@ public class GestoraViaje {
             }
         }
         return vuelos;
+    }
+
+    public static List<SeguroViaje> getSeguros(String destino) {
+        ArrayList<SeguroViaje> seguros = new ArrayList<>();
+        for(ElementoViaje e : lista){
+            if(e.getClass().equals(SeguroViaje.class)){
+                if(((SeguroViaje) e).getDestino().equals(destino)){
+                    seguros.add((SeguroViaje)e);
+                }
+            }
+        }
+        return seguros;
     }
 }
