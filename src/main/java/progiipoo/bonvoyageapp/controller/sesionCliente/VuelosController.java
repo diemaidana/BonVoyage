@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
@@ -12,9 +13,11 @@ import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class VuelosController extends SesionClienteController {
+public class VuelosController extends SesionClienteController implements Initializable {
     @FXML
     private Button btnAlojamiento;
 
@@ -58,13 +61,18 @@ public class VuelosController extends SesionClienteController {
     private TextField txtPais;
 
     @FXML
-    private TableColumn<Vuelo, String> colCiudad;
+    private TableColumn<Vuelo, String> colOrigen;
+
+    @FXML
+    private TableColumn<Vuelo, String> colDestino;
 
     @FXML
     private TableColumn<Vuelo, String> colPartida;
 
     @FXML
     private TableColumn<Vuelo, String> colPrecio;
+
+    private ObservableList<Vuelo> vuelos = FXCollections.observableArrayList();
 
     public VuelosController() {
         super();
@@ -84,13 +92,13 @@ public class VuelosController extends SesionClienteController {
         String ciudad = txtCiudad.getText();
         LocalDate fecha = partida.getValue();
 
-        ObservableList<Vuelo> vuelos = FXCollections.observableArrayList(FXCollections.observableSet(GestoraViaje.getVuelos(ciudad, fecha)));
+        vuelos.clear();
 
-        colCiudad.setCellValueFactory(new PropertyValueFactory<>("ciudadDestino"));
-        colPartida.setCellValueFactory(new PropertyValueFactory<>("fechaVuelo"));
-        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+        vuelos.addAll(GestoraViaje.getVuelos(ciudad, fecha));
 
         tblVuelos.setItems(vuelos);
+        txtCiudad.setText("");
+        partida.setValue(null);
 
     }
 
@@ -127,5 +135,13 @@ public class VuelosController extends SesionClienteController {
     @FXML
     void onVuelosClick(ActionEvent event) {
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/vuelos.fxml", usuario);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colOrigen.setCellValueFactory(new PropertyValueFactory<>("ciudadOrigen"));
+        colDestino.setCellValueFactory(new PropertyValueFactory<>("ciudadDestino"));
+        colPartida.setCellValueFactory(new PropertyValueFactory<>("fechaVuelo"));
+        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
     }
 }

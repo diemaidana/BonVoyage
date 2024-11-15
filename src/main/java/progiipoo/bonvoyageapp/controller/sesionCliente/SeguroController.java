@@ -19,7 +19,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 
-public class SeguroController extends SesionClienteController {
+public class SeguroController extends SesionClienteController implements Initializable{
     @FXML
     private Button btnAlojamiento;
 
@@ -66,6 +66,9 @@ public class SeguroController extends SesionClienteController {
     private TableColumn<SeguroViaje, String> colVueloDemorado;
 
     @FXML
+    private TableColumn<SeguroViaje, Double> colPrecio;
+
+    @FXML
     private DatePicker partida;
 
     @FXML
@@ -76,6 +79,8 @@ public class SeguroController extends SesionClienteController {
 
     @FXML
     private TextField txtDestino;
+
+    private ObservableList<SeguroViaje> seguros = FXCollections.observableArrayList();
 
     public SeguroController() {
         super();
@@ -93,18 +98,18 @@ public class SeguroController extends SesionClienteController {
     @FXML
     void onBuscarClick(ActionEvent event) {
         String destino = txtDestino.getText();
-        Integer cantDias = (int) ChronoUnit.DAYS.between(regreso.getValue(), partida.getValue());
+        Integer cantDias = (int) ChronoUnit.DAYS.between(partida.getValue(), regreso.getValue());
 
-        ObservableList<SeguroViaje> seguros = FXCollections.observableArrayList(GestoraViaje.getSeguros(destino));
+        seguros.clear();
 
-        colTipoAsistencia.setCellValueFactory(new PropertyValueFactory<>("tipoAsistencia"));
+        seguros.addAll(GestoraViaje.getSeguros(destino));
+
         colCantidadDias.setCellValueFactory(cellData -> {return new SimpleIntegerProperty(cantDias).asObject();});
-        colAsistenciaMedica.setCellValueFactory(new PropertyValueFactory<>("asistenciaMedica"));
-        colMedicamentos.setCellValueFactory(new PropertyValueFactory<>("medicamentos"));
-        colEquipaje.setCellValueFactory(new PropertyValueFactory<>("perdidaEquipaje"));
-        colVueloDemorado.setCellValueFactory(new PropertyValueFactory<>("vueloDemorado"));
 
         tblSeguros.setItems(seguros);
+        txtDestino.setText("");
+        partida.setValue(null);
+        regreso.setValue(null);
     }
 
     @FXML
@@ -140,5 +145,15 @@ public class SeguroController extends SesionClienteController {
     @FXML
     void onVuelosClick(ActionEvent event) {
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/vuelos.fxml", usuario);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colTipoAsistencia.setCellValueFactory(new PropertyValueFactory<>("tipoAsistencia"));
+        colAsistenciaMedica.setCellValueFactory(new PropertyValueFactory<>("asistenciaMedica"));
+        colMedicamentos.setCellValueFactory(new PropertyValueFactory<>("medicamentos"));
+        colEquipaje.setCellValueFactory(new PropertyValueFactory<>("perdidaEquipaje"));
+        colVueloDemorado.setCellValueFactory(new PropertyValueFactory<>("vueloDemorado"));
+        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
     }
 }

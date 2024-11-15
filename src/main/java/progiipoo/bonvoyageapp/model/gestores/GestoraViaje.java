@@ -53,7 +53,10 @@ public class GestoraViaje {
 
     public static Set<Vuelo> getVuelos(String ciudad, LocalDate fecha) {
         HashSet<Vuelo> vuelos = new HashSet<>();
-        if(ciudad == null && fecha != null){
+        System.out.println(fecha);
+        System.out.println("ciudad" + ciudad);
+        if(ciudad == "" && fecha != null){
+            System.out.println("por fecha");
             vuelos = getVuelosPorFecha(fecha);
         }else if(ciudad != null && fecha == null){
             vuelos = getVuelosPorCiudad(ciudad);

@@ -38,7 +38,6 @@
                     <children>
                         <Button fx:id="btnOfertas" minWidth="100.0" mnemonicParsing="false" onAction="#onOfertasClick" text="Ofertas" />
                         <Button fx:id="btnVuelos" minWidth="100.0" mnemonicParsing="false" onAction="#onVuelosClick" text="Vuelos" />
-                        <Button fx:id="btnPaquetes" minWidth="100.0" mnemonicParsing="false" onAction="#onPaquetesClick" text="Paquetes" />
                         <Button fx:id="btnAlojamiento" disable="true" minWidth="100.0" mnemonicParsing="false" onAction="#onAlojamientoClick" text="Alojamiento" />
                         <Button fx:id="btnSeguros" minWidth="100.0" mnemonicParsing="false" onAction="#onSegurosClick" text="Seguros" />
                     </children>
