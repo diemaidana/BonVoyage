@@ -42,7 +42,7 @@ public final class Alojamiento extends ElementoViaje {
         super(obj.getDouble("precio"));
         this.ubicacion = obj.getString("ubicacion");
         this.puntuacion = new ArrayList<>();
-        JSONArray arregloPuntuacion = new JSONArray(obj.getString("puntuacion"));
+        JSONArray arregloPuntuacion = new JSONArray(obj.getJSONArray("puntuacion"));
         for (int i = 0; i < arregloPuntuacion.length(); i++) {
             puntuacion.add(arregloPuntuacion.getInt(i));
         }
@@ -109,7 +109,10 @@ public final class Alojamiento extends ElementoViaje {
         for (Integer i : this.puntuacion) {
             promedio += i;
         }
-        return Math.round(promedio / puntuacion.size());
+        if(puntuacion.size() != 0){
+            return Math.round(promedio / puntuacion.size());
+        }
+        return 0;
     }
 
     public String getNombre() {
