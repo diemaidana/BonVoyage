@@ -42,6 +42,9 @@ public class RegistrarUsuarioController {
     private Label lblTelefono;
 
     @FXML
+    private TextField txtApellido;
+
+    @FXML
     private TextField txtCiudad;
 
     @FXML
@@ -52,6 +55,9 @@ public class RegistrarUsuarioController {
 
     @FXML
     private TextField txtEmail;
+
+    @FXML
+    private TextField txtNombre;
 
     @FXML
     private TextField txtPais;
@@ -83,6 +89,8 @@ public class RegistrarUsuarioController {
         c.setCiudad(txtCiudad.getText());
         c.setProvincia(txtProvincia.getText());
         c.setPais(txtPais.getText());
+        c.setNombre(txtNombre.getText());
+        c.setApellido(txtApellido.getText());
 
         GestorUsuarios.agregarUsuario(c);
         GestorJSONUsuarios.guardarUsuarios(GestorUsuarios.getUsuarios());

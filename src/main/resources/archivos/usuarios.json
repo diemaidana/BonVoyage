@@ -1,10 +1,11 @@
 {"usuarios": [
     {
         "password": "carolina",
-        "domicilio": "Calle 123",
+        "compras": [],
+        "domicilio": "456",
         "ciudad": "Mar del Plata",
         "apellido": "",
-        "telefono": "2235555555",
+        "telefono": "987654321",
         "provincia": "Buenos Aires",
         "nombre": "",
         "email": "carolina@mail.com",
@@ -26,18 +27,6 @@
         "nombre": "Lucas",
         "email": "lucas@mail.com",
         "dni": "41928079"
-    },
-    {
-        "password": "pato",
-        "domicilio": "Calle UTN 123",
-        "ciudad": "Mar del Plata",
-        "apellido": "",
-        "telefono": "2235444444",
-        "provincia": "Buenos Aires",
-        "nombre": "",
-        "email": "pato@mail.com",
-        "dni": "123456",
-        "pais": "Argentina"
     },
     {
         "password": "pamela",
