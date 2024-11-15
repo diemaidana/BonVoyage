@@ -15,6 +15,7 @@ public abstract class Usuario implements IpuedeCargar {
      private String apellido;
 
 
+
     public Usuario() {
         email = "";
         password = "";
