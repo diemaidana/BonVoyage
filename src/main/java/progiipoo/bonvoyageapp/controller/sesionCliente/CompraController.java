@@ -59,6 +59,8 @@ public class CompraController {
             alerta.show();
 
 
+        }catch (TarjetaInvalidaException e){
+            e.printStackTrace();
         }
 
     }
