@@ -6,8 +6,10 @@ import javafx.scene.control.*;
 import progiipoo.bonvoyageapp.controller.Exceptions.TarjetaInvalidaException;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.MetodosDePago.TarjetaCredito;
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
+import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 
-public class CompraController {
+public class CompraController extends SesionClienteController{
     @FXML
     private Button btnCancelar;
 
@@ -31,6 +33,19 @@ public class CompraController {
 
     @FXML
     private TextField txtTitular;
+
+    private ElementoViaje elemento;
+
+    public CompraController() {
+    }
+
+    public ElementoViaje getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(ElementoViaje elemento) {
+        this.elemento = elemento;
+    }
 
     @FXML
     void onCancelarClick(ActionEvent event) {
@@ -58,6 +73,7 @@ public class CompraController {
             alerta.setHeaderText(null);
             alerta.show();
 
+            usuario.agregarElemViaje(elemento);
 
         }catch (TarjetaInvalidaException e){
             e.printStackTrace();

@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 
@@ -86,7 +87,7 @@ public class SeguroController extends SesionClienteController implements Initial
         super();
     }
 
-    public SeguroController(Usuario usuario) {
+    public SeguroController(Cliente usuario) {
         super(usuario);
     }
 

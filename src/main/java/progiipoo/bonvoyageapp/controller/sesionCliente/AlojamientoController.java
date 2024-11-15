@@ -4,17 +4,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AlojamientoController extends SesionClienteController{
+public class AlojamientoController extends SesionClienteController implements Initializable {
     @FXML
     private Button btnAlojamiento;
 
@@ -49,25 +51,25 @@ public class AlojamientoController extends SesionClienteController{
     private DatePicker checkOut;
 
     @FXML
-    private TableColumn<?, ?> colCiudad;
+    private TableColumn<Alojamiento, String> colCiudad;
 
     @FXML
-    private TableColumn<?, ?> colDesayuno;
+    private TableColumn<Alojamiento, Boolean> colDesayuno;
 
     @FXML
-    private TableColumn<?, ?> colHotel;
+    private TableColumn<Alojamiento, String> colHotel;
 
     @FXML
-    private TableColumn<?, ?> colNoches;
+    private TableColumn<Alojamiento, String> colNoches;
 
     @FXML
-    private TableColumn<?, ?> colPais;
+    private TableColumn<Alojamiento, String> colPais;
 
     @FXML
-    private TableColumn<?, ?> colPrecio;
+    private TableColumn<Alojamiento, Double> colPrecio;
 
     @FXML
-    private TableColumn<?, ?> colPuntuacion;
+    private TableColumn<Alojamiento, Integer> colPuntuacion;
 
     @FXML
     private TableView<Alojamiento> tblAlojamiento;
@@ -82,9 +84,9 @@ public class AlojamientoController extends SesionClienteController{
         super();
     }
 
-    private ObservableList<Alojamiento> alojamientos;
+    private ObservableList<Alojamiento> alojamientos = FXCollections.observableArrayList();
 
-    public AlojamientoController(Usuario usuario) {
+    public AlojamientoController(Cliente usuario) {
         super(usuario);
     }
 
@@ -95,16 +97,19 @@ public class AlojamientoController extends SesionClienteController{
 
     @FXML
     void onBuscarClick(ActionEvent event) {
-        GestorEscenas.abrirEscena(event,"/progiipoo/bonvoyageapp/sesionCliente/alojamiento.fxml");
-        alojamientos = FXCollections.observableList(GestoraViaje.getAlojamientos(txtCiudad.getText(),txtPais.getText()));
+//        GestorEscenas.abrirEscena(event,"/progiipoo/bonvoyageapp/sesionCliente/alojamiento.fxml");
+        String ciudad = txtCiudad.getText();
+        String pais = txtPais.getText();
 
-        colCiudad.setCellValueFactory(new PropertyValueFactory<>("ciudad"));
-        colDesayuno.setCellValueFactory(new PropertyValueFactory<>("desayuno"));
-        colPrecio.setCellValueFactory((new PropertyValueFactory<>("precio")));
-        colPuntuacion.setCellValueFactory(new PropertyValueFactory<>("puntuacion"));
-        colHotel.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        alojamientos.clear();
+
+        alojamientos.addAll(GestoraViaje.getAlojamientos(ciudad, pais));
+
 
         tblAlojamiento.setItems(alojamientos);
+
+        txtCiudad.setText("");
+        txtPais.setText("");
     }
 
     @FXML
@@ -140,5 +145,15 @@ public class AlojamientoController extends SesionClienteController{
     @FXML
     void onVuelosClick(ActionEvent event) {
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/vuelos.fxml", usuario);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colCiudad.setCellValueFactory(new PropertyValueFactory<>("ciudad"));
+        colDesayuno.setCellValueFactory(new PropertyValueFactory<>("desayuno"));
+        colPrecio.setCellValueFactory((new PropertyValueFactory<>("precio")));
+        colPuntuacion.setCellValueFactory(new PropertyValueFactory<>("puntuacion"));
+        colHotel.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colPais.setCellValueFactory(new PropertyValueFactory<>("pais"));
     }
 }

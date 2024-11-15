@@ -1,7 +1,9 @@
 package progiipoo.bonvoyageapp.model.usuarios;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 
 import java.util.ArrayList;
 
@@ -11,6 +13,7 @@ public final class Cliente extends Usuario{
     private String ciudad;
     private String provincia;
     private String pais;
+    private ArrayList<ElementoViaje> compras;
 
 
 
@@ -21,6 +24,7 @@ public final class Cliente extends Usuario{
         ciudad = "";
         provincia = "";
         pais = "";
+        compras = new ArrayList<>();
     }
 
     public Cliente(String email, String password, String dni, String telefono, String domicilio, String ciudad, String provincia, String pais, String nombre, String apellido) {
@@ -30,6 +34,7 @@ public final class Cliente extends Usuario{
         this.ciudad = ciudad;
         this.provincia = provincia;
         this.pais = pais;
+        this.compras = new ArrayList<>();
     }
 
     public Cliente(JSONObject json){
@@ -39,6 +44,10 @@ public final class Cliente extends Usuario{
         this.ciudad = json.getString("ciudad");
         this.provincia = json.getString("provincia");
         this.pais = json.getString("pais");
+        JSONArray arreglo = new JSONArray(json.get("compras"));
+        for (int i = 0; i < arreglo.length(); i++) {
+            compras.add((ElementoViaje) arreglo.get(i));
+        }
     }
 
     public String getTelefono() {
@@ -81,6 +90,14 @@ public final class Cliente extends Usuario{
         this.pais = pais;
     }
 
+    public void agregarElemViaje(ElementoViaje e){
+        compras.add(e);
+    }
+
+    public ArrayList<ElementoViaje> getCompras() {
+        return compras;
+    }
+
     public JSONObject toJSON(){
         JSONObject json = super.toJSON();
         try{
@@ -89,6 +106,11 @@ public final class Cliente extends Usuario{
             json.put("ciudad", ciudad);
             json.put("provincia", provincia);
             json.put("pais", pais);
+            JSONArray arreglo = new JSONArray();
+            for(ElementoViaje e : compras){
+                arreglo.put(e);
+            }
+            json.put("compras", arreglo);
         }catch (JSONException e){
             e.printStackTrace();
         }

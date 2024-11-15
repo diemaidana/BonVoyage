@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
@@ -83,7 +84,7 @@ public class SesionIniciadaController extends SesionClienteController implements
         super();
     }
 
-    public SesionIniciadaController(Usuario u) {
+    public SesionIniciadaController(Cliente u) {
         super(u);
     }
 
@@ -130,9 +131,12 @@ public class SesionIniciadaController extends SesionClienteController implements
 
         if(tblVuelos.getSelectionModel().getSelectedItem() != null){
             vuelo = tblVuelos.getSelectionModel().getSelectedItem();
+            GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/compra.fxml", usuario, vuelo);
         }else if(tblAlojamiento.getSelectionModel().getSelectedItem() != null){
             alojamiento = tblAlojamiento.getSelectionModel().getSelectedItem();
+            GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/compra.fxml", usuario, alojamiento);
         }
+
 
 
     }

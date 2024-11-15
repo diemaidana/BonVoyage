@@ -141,5 +141,16 @@ public final class Alojamiento extends ElementoViaje {
         return json;
     }
 
-
+    @Override
+    public String toString() {
+        return "Alojamiento{" +
+                "ubicacion='" + ubicacion + '\'' +
+                ", puntuacion=" + puntuacion +
+                ", desayuno=" + desayuno +
+                ", ciudad='" + ciudad + '\'' +
+                ", pais='" + pais + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", nombre='" + nombre + '\'' +
+                "} " + super.toString();
+    }
 }

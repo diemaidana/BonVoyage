@@ -1,9 +1,58 @@
-{"usuarios":
-[
-  {"password":"carolina","domicilio":"Calle 123","ciudad":"Mar del Plata","apellido":"","telefono":"2235555555","provincia":"Buenos Aires","nombre":"","email":"carolina@mail.com","dni":"123456789","pais":"Argentina"},
-  {"password":"diego","legajo":"1","apellido":"Maidana","nombre":"Diego","email":"diego@mail.com","dni":"36382384"},
-  {"password":"lucas","legajo":"0","apellido":"Camino","nombre":"Lucas","email":"lucas@mail.com","dni":"41928079"},
-  {"password":"pamela","legajo":"2","apellido":"Ortiz","nombre":"Pamela","email":"pamela@mail.com","dni":"37983668"},
-  {"password":"agustin","legajo":"3","apellido":"Alvarez","nombre":"Agustin","email":"agustin@mail.com","dni":"123"}
-]
-}
+{"usuarios": [
+    {
+        "password": "carolina",
+        "domicilio": "Calle 123",
+        "ciudad": "Mar del Plata",
+        "apellido": "",
+        "telefono": "2235555555",
+        "provincia": "Buenos Aires",
+        "nombre": "",
+        "email": "carolina@mail.com",
+        "dni": "123456789",
+        "pais": "Argentina"
+    },
+    {
+        "password": "diego",
+        "legajo": "1",
+        "apellido": "Maidana",
+        "nombre": "Diego",
+        "email": "diego@mail.com",
+        "dni": "36382384"
+    },
+    {
+        "password": "lucas",
+        "legajo": "0",
+        "apellido": "Camino",
+        "nombre": "Lucas",
+        "email": "lucas@mail.com",
+        "dni": "41928079"
+    },
+    {
+        "password": "pato",
+        "domicilio": "Calle UTN 123",
+        "ciudad": "Mar del Plata",
+        "apellido": "",
+        "telefono": "2235444444",
+        "provincia": "Buenos Aires",
+        "nombre": "",
+        "email": "pato@mail.com",
+        "dni": "123456",
+        "pais": "Argentina"
+    },
+    {
+        "password": "pamela",
+        "legajo": "2",
+        "apellido": "Ortiz",
+        "nombre": "Pamela",
+        "email": "pamela@mail.com",
+        "dni": "37983668"
+    },
+    {
+        "password": "agustin",
+        "legajo": "3",
+        "apellido": "Alvarez",
+        "nombre": "Agustin",
+        "email": "agustin@mail.com",
+        "dni": "123"
+    }
+]}

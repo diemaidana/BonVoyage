@@ -62,11 +62,8 @@ public class GestoraViaje {
                 }
             }
         }
-        Collections.sort(alojamientos);
-        if(alojamientos.size() < 5){
-            return alojamientos.subList(0,alojamientos.size());
-        }
-        return alojamientos.subList(0,3);
+
+        return alojamientos;
     }
 
     public static List<Vuelo> getVuelosBaratos(){

@@ -1,15 +1,16 @@
 package progiipoo.bonvoyageapp.controller.sesionCliente;
 
+import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 
 public class SesionClienteController {
-    protected Usuario usuario;
+    protected Cliente usuario;
 
     public SesionClienteController() {
         usuario = null;
     }
 
-    public SesionClienteController(Usuario usuario) {
+    public SesionClienteController(Cliente usuario) {
         this.usuario = usuario;
     }
 
@@ -17,7 +18,7 @@ public class SesionClienteController {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(Cliente usuario) {
         this.usuario = usuario;
     }
 }
