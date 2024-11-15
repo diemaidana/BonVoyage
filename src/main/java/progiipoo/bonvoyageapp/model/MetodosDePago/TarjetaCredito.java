@@ -3,17 +3,18 @@ package progiipoo.bonvoyageapp.model.MetodosDePago;
 public final class TarjetaCredito {
     private String numeroTarjeta;
     private String nombreTitular;
-    private String fechaExpiracion;
+    private String mesExpiracion;
+    private String anioExpiracion;
     private String codigoSeguridad;
 
     // Constructor
-    public TarjetaCredito(String numeroTarjeta, String nombreTitular, String fechaExpiracion, String codigoSeguridad) {
+    public TarjetaCredito(String numeroTarjeta, String nombreTitular, String mesExpiracion, String anioExpiracion, String codigoSeguridad) {
         this.numeroTarjeta = numeroTarjeta;
         this.nombreTitular = nombreTitular;
-        this.fechaExpiracion = fechaExpiracion;
+        this.mesExpiracion = mesExpiracion;
+        this.anioExpiracion = anioExpiracion;
         this.codigoSeguridad = codigoSeguridad;
     }
-
 
     private boolean procesarPago(double monto) {
         if (esValida()) {
