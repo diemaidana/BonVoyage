@@ -4,24 +4,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
 import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
-import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
-
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class SesionIniciadaController extends SesionClienteController implements Initializable {

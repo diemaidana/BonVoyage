@@ -52,6 +52,23 @@ public class GestoraViaje {
         return alojamientos.subList(0,3);
     }
 
+    public static List<Alojamiento> getAlojamientos(String ciudad,String pais){
+        ArrayList<Alojamiento> alojamientos = new ArrayList<>();
+
+        for(ElementoViaje e : lista){
+            if(e.getClass().equals((Alojamiento.class))){
+                if((((Alojamiento) e).getCiudad()).equals(ciudad) || (((Alojamiento) e).getPais()).equals(pais) ) {
+                    alojamientos.add((Alojamiento) e);
+                }
+            }
+        }
+        Collections.sort(alojamientos);
+        if(alojamientos.size() < 5){
+            return alojamientos.subList(0,alojamientos.size());
+        }
+        return alojamientos.subList(0,3);
+    }
+
     public static List<Vuelo> getVuelosBaratos(){
         ArrayList<Vuelo> vuelos = new ArrayList<>();
         for(ElementoViaje e : lista){
@@ -63,7 +80,7 @@ public class GestoraViaje {
         if(vuelos.size() < 3){
             return vuelos.subList(0, vuelos.size());
         }
-        return vuelos.subList(0,2);
+        return vuelos.subList(0,5);
     }
 
     public static Set<Vuelo> getVuelos(String ciudad, LocalDate fecha) {

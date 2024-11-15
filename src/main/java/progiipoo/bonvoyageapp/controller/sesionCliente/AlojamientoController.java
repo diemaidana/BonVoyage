@@ -1,10 +1,18 @@
 package progiipoo.bonvoyageapp.controller.sesionCliente;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
+import progiipoo.bonvoyageapp.model.gestores.GestoraViaje;
 import progiipoo.bonvoyageapp.model.usuarios.Usuario;
+import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class AlojamientoController extends SesionClienteController{
     @FXML
@@ -62,7 +70,7 @@ public class AlojamientoController extends SesionClienteController{
     private TableColumn<?, ?> colPuntuacion;
 
     @FXML
-    private TableView<?> tblVuelos;
+    private TableView<Alojamiento> tblAlojamiento;
 
     @FXML
     private TextField txtCiudad;
@@ -73,6 +81,8 @@ public class AlojamientoController extends SesionClienteController{
     public AlojamientoController() {
         super();
     }
+
+    private ObservableList<Alojamiento> alojamientos;
 
     public AlojamientoController(Usuario usuario) {
         super(usuario);
@@ -85,7 +95,16 @@ public class AlojamientoController extends SesionClienteController{
 
     @FXML
     void onBuscarClick(ActionEvent event) {
+        GestorEscenas.abrirEscena(event,"/progiipoo/bonvoyageapp/sesionCliente/alojamiento.fxml");
+        alojamientos = FXCollections.observableList(GestoraViaje.getAlojamientos(txtCiudad.getText(),txtPais.getText()));
 
+        colCiudad.setCellValueFactory(new PropertyValueFactory<>("ciudad"));
+        colDesayuno.setCellValueFactory(new PropertyValueFactory<>("desayuno"));
+        colPrecio.setCellValueFactory((new PropertyValueFactory<>("precio")));
+        colPuntuacion.setCellValueFactory(new PropertyValueFactory<>("puntuacion"));
+        colHotel.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+
+        tblAlojamiento.setItems(alojamientos);
     }
 
     @FXML
