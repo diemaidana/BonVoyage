@@ -30,16 +30,6 @@
         "ciudadDestino": "Santiago"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Munich",
-        "medicamentos": "40000"
-    },
-    {
         "tipoAsistencia": "Platino",
         "precio": 60,
         "cantDias": 0,
@@ -56,7 +46,7 @@
         "asistenciaMedica": "50000",
         "perdidaEquipaje": "2000",
         "vueloDemorado": "1500",
-        "destino": "Valencia",
+        "destino": "Munich",
         "medicamentos": "40000"
     },
     {
@@ -66,8 +56,18 @@
         "asistenciaMedica": "50000",
         "perdidaEquipaje": "2000",
         "vueloDemorado": "1500",
-        "destino": "Madrid",
-        "medicamentos": "20000"
+        "destino": "Londres",
+        "medicamentos": "40000"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Paris",
+        "medicamentos": "10000"
     },
     {
         "tipoAsistencia": "Platino",
@@ -75,19 +75,19 @@
         "cantDias": 0,
         "asistenciaMedica": "20000",
         "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Atenas",
-        "medicamentos": "10000"
+        "vueloDemorado": "400",
+        "destino": "Lima",
+        "medicamentos": "5000"
     },
     {
         "tipoAsistencia": "Platino",
         "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "20000",
+        "asistenciaMedica": "10000",
         "perdidaEquipaje": "1500",
-        "vueloDemorado": "900",
-        "destino": "Tokio",
-        "medicamentos": "10000"
+        "vueloDemorado": "600",
+        "destino": "Casablanca",
+        "medicamentos": "2000"
     },
     {
         "precio": 100,
@@ -104,10 +104,10 @@
         "precio": 80,
         "cantDias": 0,
         "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Paris",
-        "medicamentos": "10000"
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Ciudad de Mexico",
+        "medicamentos": "20000"
     },
     {
         "precio": 120,
@@ -120,14 +120,14 @@
         "ciudadDestino": "Los Angeles"
     },
     {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
+        "tipoAsistencia": "Plata",
+        "precio": 80,
         "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Santiago",
-        "medicamentos": "5000"
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Genova",
+        "medicamentos": "20000"
     },
     {
         "precio": 160,
@@ -180,14 +180,14 @@
         "ciudadDestino": "Atenas"
     },
     {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
+        "tipoAsistencia": "Oro",
+        "precio": 120,
         "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Genova",
-        "medicamentos": "20000"
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Honolulu",
+        "medicamentos": "40000"
     },
     {
         "precio": 190,
@@ -201,23 +201,23 @@
     },
     {
         "tipoAsistencia": "Oro",
-        "precio": 120,
+        "precio": 150,
         "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Londres",
-        "medicamentos": "40000"
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Los Angeles",
+        "medicamentos": "20000"
     },
     {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
+        "tipoAsistencia": "Plata",
+        "precio": 80,
         "cantDias": 0,
-        "asistenciaMedica": "20000",
+        "asistenciaMedica": "40000",
         "perdidaEquipaje": "1000",
-        "vueloDemorado": "400",
-        "destino": "Lima",
-        "medicamentos": "5000"
+        "vueloDemorado": "900",
+        "destino": "Bangkok",
+        "medicamentos": "20000"
     },
     {
         "precio": 170,
@@ -256,17 +256,7 @@
         "asistenciaMedica": "40000",
         "perdidaEquipaje": "1500",
         "vueloDemorado": "1000",
-        "destino": "Ciudad de Mexico",
-        "medicamentos": "20000"
-    },
-    {
-        "tipoAsistencia": "Oro",
-        "precio": 150,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Los Angeles",
+        "destino": "Roma",
         "medicamentos": "20000"
     },
     {
@@ -274,19 +264,29 @@
         "precio": 120,
         "cantDias": 0,
         "asistenciaMedica": "50000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Medellin",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Valencia",
         "medicamentos": "40000"
+    },
+    {
+        "tipoAsistencia": "Oro",
+        "precio": 120,
+        "cantDias": 0,
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Madrid",
+        "medicamentos": "20000"
     },
     {
         "tipoAsistencia": "Plata",
         "precio": 80,
         "cantDias": 0,
         "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "900",
-        "destino": "Bangkok",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Auckland",
         "medicamentos": "20000"
     },
     {
@@ -300,14 +300,14 @@
         "ciudadDestino": "Tokio"
     },
     {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
+        "tipoAsistencia": "Platino",
+        "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Quito",
-        "medicamentos": "20000"
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Santiago",
+        "medicamentos": "5000"
     },
     {
         "precio": 115,
@@ -320,44 +320,44 @@
         "ciudadDestino": "Genova"
     },
     {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
+        "tipoAsistencia": "Oro",
+        "precio": 120,
         "cantDias": 0,
-        "asistenciaMedica": "40000",
+        "asistenciaMedica": "50000",
         "perdidaEquipaje": "1500",
         "vueloDemorado": "1000",
-        "destino": "Auckland",
-        "medicamentos": "20000"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Roma",
-        "medicamentos": "20000"
+        "destino": "Medellin",
+        "medicamentos": "40000"
     },
     {
         "tipoAsistencia": "Platino",
         "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "10000",
+        "asistenciaMedica": "20000",
         "perdidaEquipaje": "1500",
-        "vueloDemorado": "600",
-        "destino": "Casablanca",
-        "medicamentos": "2000"
+        "vueloDemorado": "900",
+        "destino": "Tokio",
+        "medicamentos": "10000"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
+        "tipoAsistencia": "Platino",
+        "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Honolulu",
-        "medicamentos": "40000"
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Atenas",
+        "medicamentos": "10000"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Quito",
+        "medicamentos": "20000"
     },
     {
         "precio": 100,

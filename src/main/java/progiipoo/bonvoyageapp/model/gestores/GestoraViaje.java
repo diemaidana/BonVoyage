@@ -2,6 +2,7 @@ package progiipoo.bonvoyageapp.model.gestores;
 
 import javafx.collections.ObservableList;
 import progiipoo.bonvoyageapp.model.Contenedora;
+import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
 import progiipoo.bonvoyageapp.model.viaje.Vuelo;
@@ -35,6 +36,20 @@ public class GestoraViaje {
 
     public static Contenedora<ElementoViaje> getLista() {
         return lista;
+    }
+
+    public static List<Alojamiento> getAlojamientos(){
+        ArrayList<Alojamiento> alojamientos = new ArrayList<>();
+        for(ElementoViaje e : lista){
+            if(e.getClass().equals((Alojamiento.class))){
+                alojamientos.add((Alojamiento) e);
+            }
+        }
+        Collections.sort(alojamientos);
+        if(alojamientos.size() < 5){
+            return alojamientos.subList(0,alojamientos.size());
+        }
+        return alojamientos.subList(0,3);
     }
 
     public static List<Vuelo> getVuelosBaratos(){
