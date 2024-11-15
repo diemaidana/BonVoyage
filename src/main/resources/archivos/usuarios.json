@@ -1,16 +1,47 @@
 {"usuarios": [
     {
-        "password": "carolina",
-        "compras": [],
-        "domicilio": "456",
-        "ciudad": "Mar del Plata",
-        "apellido": "",
-        "telefono": "987654321",
-        "provincia": "Buenos Aires",
-        "nombre": "",
+        "password": "123",
+        "compras": [
+            {
+                "precio": 100,
+                "provinciaOrigen": "Arequipa",
+                "ciudadOrigen": "Arequipa",
+                "provinciaDestino": "Antioquia",
+                "paisOrigen": "Peru",
+                "paisDestino": "Colombia",
+                "fechaVuelo": "2025-03-27",
+                "ciudadDestino": "Medellin"
+            },
+            {
+                "precio": 190,
+                "ubicacion": "Calle 740",
+                "puntuacion": [],
+                "ciudad": "Tokio",
+                "desayuno": true,
+                "provincia": "Tokio",
+                "nombre": "Ponja Hotel",
+                "pais": "Japon"
+            },
+            {
+                "precio": 150,
+                "ubicacion": "Calle 123",
+                "puntuacion": [],
+                "ciudad": "Ciudad de Mexico",
+                "desayuno": true,
+                "provincia": "Ciudad de Mexico",
+                "nombre": "Ole Hotel",
+                "pais": "Mexico"
+            }
+        ],
+        "domicilio": "123",
+        "ciudad": "123",
+        "apellido": "123",
+        "telefono": "123",
+        "provincia": "1231",
+        "nombre": "123",
         "email": "carolina@mail.com",
-        "dni": "123456789",
-        "pais": "Argentina"
+        "dni": "123",
+        "pais": "123"
     },
     {
         "password": "diego",

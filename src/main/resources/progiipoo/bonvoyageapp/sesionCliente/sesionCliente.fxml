@@ -75,7 +75,6 @@
                <children>
                   <HBox alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="1045.0" spacing="20.0">
                      <children>
-                        <Button fx:id="btnMiCuenta" alignment="CENTER" minWidth="85.0" mnemonicParsing="false" onAction="#onMiCuentaClick" text="Mi cuenta" />
                         <Button fx:id="btnCerrarSesion" alignment="CENTER" mnemonicParsing="false" onAction="#onCerrarSesionClick" text="Cerrar sesion" />
                      </children>
                      <padding>

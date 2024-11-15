@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="208.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/images/Bon Voyage Sin Fondo.png" />
+                  <Image url="@../../../images/Bon Voyage Sin Fondo.png" />
                </image>
             </ImageView>
             <Label text="Metodo de pago">

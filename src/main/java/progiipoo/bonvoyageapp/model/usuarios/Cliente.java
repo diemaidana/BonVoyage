@@ -3,7 +3,10 @@ package progiipoo.bonvoyageapp.model.usuarios;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import progiipoo.bonvoyageapp.model.viaje.Alojamiento;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
+import progiipoo.bonvoyageapp.model.viaje.SeguroViaje;
+import progiipoo.bonvoyageapp.model.viaje.Vuelo;
 
 import java.util.ArrayList;
 
@@ -44,9 +47,24 @@ public final class Cliente extends Usuario{
         this.ciudad = json.getString("ciudad");
         this.provincia = json.getString("provincia");
         this.pais = json.getString("pais");
-        JSONArray arreglo = new JSONArray(json.get("compras"));
-        for (int i = 0; i < arreglo.length(); i++) {
-            compras.add((ElementoViaje) arreglo.get(i));
+        compras = new ArrayList<>();
+        JSONArray arreglo = new JSONArray(json.getJSONArray("compras"));
+        if(!arreglo.isEmpty()){
+            for (int i = 0; i < arreglo.length(); i++) {
+                JSONObject obj = arreglo.getJSONObject(i);
+                if(obj.has("ubicacion") && obj.has("puntuacion") && obj.has("desayuno") && obj.has("ciudad") && obj.has("provincia") && obj.has("pais")){
+                    Alojamiento a = new Alojamiento(obj);
+                    compras.add(a);
+                }
+                if(obj.has("cantDias") && obj.has("destino") && obj.has("tipoAsistencia") && obj.has("asistenciaMedica") && obj.has("medicamentos") && obj.has("perdidaEquipaje") && obj.has("vueloDemorado")){
+                    SeguroViaje sv = new SeguroViaje(obj);
+                    compras.add(sv);
+                }
+                if(obj.has("ciudadOrigen") && obj.has("provinciaOrigen") && obj.has("paisOrigen") && obj.has("ciudadDestino") && obj.has("provinciaDestino") && obj.has("paisDestino") && obj.has("fechaVuelo")){
+                    Vuelo v = new Vuelo(obj);
+                    compras.add(v);
+                }
+            }
         }
     }
 
@@ -91,7 +109,7 @@ public final class Cliente extends Usuario{
     }
 
     public void agregarElemViaje(ElementoViaje e){
-        compras.add(e);
+        this.compras.add(e);
     }
 
     public ArrayList<ElementoViaje> getCompras() {
@@ -108,7 +126,7 @@ public final class Cliente extends Usuario{
             json.put("pais", pais);
             JSONArray arreglo = new JSONArray();
             for(ElementoViaje e : compras){
-                arreglo.put(e);
+                arreglo.put(e.toJSON());
             }
             json.put("compras", arreglo);
         }catch (JSONException e){

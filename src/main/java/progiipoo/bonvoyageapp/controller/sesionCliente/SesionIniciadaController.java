@@ -99,11 +99,6 @@ public class SesionIniciadaController extends SesionClienteController implements
     }
 
     @FXML
-    void onMiCuentaClick(ActionEvent event) {
-
-    }
-
-    @FXML
     void onOfertasClick(ActionEvent event) {
         GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml", usuario);
     }
@@ -136,9 +131,6 @@ public class SesionIniciadaController extends SesionClienteController implements
             alojamiento = tblAlojamiento.getSelectionModel().getSelectedItem();
             GestorEscenas.abrirEscena(event, "/progiipoo/bonvoyageapp/sesionCliente/compra.fxml", usuario, alojamiento);
         }
-
-
-
     }
 
     @Override

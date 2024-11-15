@@ -6,6 +6,8 @@ import javafx.scene.control.*;
 import progiipoo.bonvoyageapp.controller.Exceptions.TarjetaInvalidaException;
 import progiipoo.bonvoyageapp.controller.GestorEscenas;
 import progiipoo.bonvoyageapp.model.MetodosDePago.TarjetaCredito;
+import progiipoo.bonvoyageapp.model.gestores.GestorJSONUsuarios;
+import progiipoo.bonvoyageapp.model.gestores.GestorUsuarios;
 import progiipoo.bonvoyageapp.model.usuarios.Cliente;
 import progiipoo.bonvoyageapp.model.viaje.ElementoViaje;
 
@@ -74,6 +76,10 @@ public class CompraController extends SesionClienteController{
             alerta.show();
 
             usuario.agregarElemViaje(elemento);
+
+            GestorJSONUsuarios.guardarUsuarios(GestorUsuarios.getUsuarios());
+
+            GestorEscenas.abrirEscena(event,"/progiipoo/bonvoyageapp/sesionCliente/sesionCliente.fxml", usuario);
 
         }catch (TarjetaInvalidaException e){
             e.printStackTrace();

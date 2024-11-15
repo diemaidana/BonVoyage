@@ -10,13 +10,23 @@
         "ciudadDestino": "Ciudad de Mexico"
     },
     {
-        "precio": 410,
-        "ubicacion": "Calle 850",
+        "tipoAsistencia": "Oro",
+        "precio": 120,
+        "cantDias": 0,
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Los Angeles",
+        "medicamentos": "15000"
+    },
+    {
+        "precio": 459,
+        "ubicacion": "Calle 630",
         "puntuacion": [],
-        "ciudad": "Madrid",
+        "ciudad": "Valencia",
         "desayuno": true,
-        "provincia": "Madrid",
-        "nombre": "Es Hotel",
+        "provincia": "Comunidad Valenciana",
+        "nombre": "Nuit Hotel",
         "pais": "España"
     },
     {
@@ -30,54 +40,44 @@
         "medicamentos": "20000"
     },
     {
+        "precio": 400,
+        "ubicacion": "Calle 365",
+        "puntuacion": [],
+        "ciudad": "Auckland",
+        "desayuno": true,
+        "provincia": "Auckland",
+        "nombre": "Zela Hotel",
+        "pais": "Nueva Zelanda"
+    },
+    {
+        "precio": 190,
+        "ubicacion": "Calle 740",
+        "puntuacion": [],
+        "ciudad": "Tokio",
+        "desayuno": true,
+        "provincia": "Tokio",
+        "nombre": "Ponja Hotel",
+        "pais": "Japon"
+    },
+    {
         "tipoAsistencia": "Oro",
         "precio": 120,
         "cantDias": 0,
         "asistenciaMedica": "50000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Los Angeles",
-        "medicamentos": "15000"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Genova",
-        "medicamentos": "20000"
-    },
-    {
-        "precio": 600,
-        "ubicacion": "Calle 798",
-        "puntuacion": [],
-        "ciudad": "Genova",
-        "desayuno": true,
-        "provincia": "Liguria",
-        "nombre": "Italo Hotel",
-        "pais": "Italia"
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Londres",
+        "medicamentos": "40000"
     },
     {
         "tipoAsistencia": "Oro",
-        "precio": 150,
+        "precio": 120,
         "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Los Angeles",
-        "medicamentos": "20000"
-    },
-    {
-        "precio": 900,
-        "ubicacion": "St 450",
-        "puntuacion": [],
-        "ciudad": "Honolulu",
-        "desayuno": true,
-        "provincia": "Hawaii",
-        "nombre": "Aloha Hotel",
-        "pais": "Estados Unidos"
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Honolulu",
+        "medicamentos": "40000"
     },
     {
         "precio": 160,
@@ -90,16 +90,6 @@
         "ciudadDestino": "Honolulu"
     },
     {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Roma",
-        "medicamentos": "20000"
-    },
-    {
         "precio": 160,
         "provinciaOrigen": "Buenos Aires",
         "ciudadOrigen": "Ciudad de Buenos Aires",
@@ -108,6 +98,16 @@
         "paisDestino": "España",
         "fechaVuelo": "2024-11-27",
         "ciudadDestino": "Madrid"
+    },
+    {
+        "tipoAsistencia": "Oro",
+        "precio": 120,
+        "cantDias": 0,
+        "asistenciaMedica": "50000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Medellin",
+        "medicamentos": "40000"
     },
     {
         "precio": 140,
@@ -130,6 +130,16 @@
         "ciudadDestino": "Paris"
     },
     {
+        "precio": 300,
+        "ubicacion": "Calle 500",
+        "puntuacion": [],
+        "ciudad": "Santiago",
+        "desayuno": true,
+        "provincia": "Valparaiso",
+        "nombre": "Chi Hotel",
+        "pais": "Chile"
+    },
+    {
         "precio": 170,
         "provinciaOrigen": "Escocia",
         "ciudadOrigen": "Edimburgo",
@@ -150,44 +160,34 @@
         "ciudadDestino": "San Jose"
     },
     {
-        "precio": 400,
-        "ubicacion": "Calle 500",
-        "puntuacion": [],
-        "ciudad": "Lima",
-        "desayuno": true,
-        "provincia": "Lima",
-        "nombre": "Peruano Hotel",
-        "pais": "Peru"
-    },
-    {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
+        "tipoAsistencia": "Platino",
+        "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Honolulu",
-        "medicamentos": "40000"
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Santiago",
+        "medicamentos": "5000"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
-        "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Madrid",
-        "medicamentos": "20000"
-    },
-    {
-        "precio": 420,
-        "ubicacion": "St 140",
+        "precio": 600,
+        "ubicacion": "Calle 798",
         "puntuacion": [],
-        "ciudad": "Los Angeles",
+        "ciudad": "Genova",
         "desayuno": true,
-        "provincia": "California",
-        "nombre": "American Hotel",
-        "pais": "Estados Unidos"
+        "provincia": "Liguria",
+        "nombre": "Italo Hotel",
+        "pais": "Italia"
+    },
+    {
+        "precio": 465,
+        "ubicacion": "Calle 320",
+        "puntuacion": [],
+        "ciudad": "Medellin",
+        "desayuno": true,
+        "provincia": "Antioquia",
+        "nombre": "Colo Hotel ",
+        "pais": "Colombia"
     },
     {
         "precio": 500,
@@ -200,6 +200,26 @@
         "ciudadDestino": "Tokio"
     },
     {
+        "precio": 300,
+        "ubicacion": "Calle 450",
+        "puntuacion": [],
+        "ciudad": "San Jose",
+        "desayuno": true,
+        "provincia": "San Jose",
+        "nombre": "Selva Hotel",
+        "pais": "Costa Rica"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Paris",
+        "medicamentos": "10000"
+    },
+    {
         "precio": 115,
         "provinciaOrigen": "Provenza-Alpes-Costa Azul",
         "ciudadOrigen": "Niza",
@@ -210,34 +230,24 @@
         "ciudadDestino": "Genova"
     },
     {
-        "tipoAsistencia": "Oro",
-        "precio": 120,
+        "tipoAsistencia": "Plata",
+        "precio": 80,
         "cantDias": 0,
-        "asistenciaMedica": "50000",
-        "perdidaEquipaje": "2000",
-        "vueloDemorado": "1500",
-        "destino": "Londres",
-        "medicamentos": "40000"
-    },
-    {
-        "precio": 460,
-        "ubicacion": "Calle 600",
-        "puntuacion": [],
-        "ciudad": "Munich",
-        "desayuno": true,
-        "provincia": "Baviera",
-        "nombre": "Aleman Hotel",
-        "pais": "Alemania"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "20000",
+        "asistenciaMedica": "40000",
         "perdidaEquipaje": "1500",
-        "vueloDemorado": "900",
-        "destino": "Tokio",
-        "medicamentos": "10000"
+        "vueloDemorado": "1000",
+        "destino": "Auckland",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 900,
+        "ubicacion": "St 450",
+        "puntuacion": [],
+        "ciudad": "Honolulu",
+        "desayuno": true,
+        "provincia": "Hawaii",
+        "nombre": "Aloha Hotel",
+        "pais": "Estados Unidos"
     },
     {
         "precio": 110,
@@ -270,184 +280,14 @@
         "ciudadDestino": "Casablanca"
     },
     {
-        "precio": 300,
-        "ubicacion": "Calle 500",
-        "puntuacion": [],
-        "ciudad": "Santiago",
-        "desayuno": true,
-        "provincia": "Valparaiso",
-        "nombre": "Chi Hotel",
-        "pais": "Chile"
-    },
-    {
-        "precio": 100,
-        "provinciaOrigen": "Cordoba",
-        "ciudadOrigen": "Cordoba",
-        "provinciaDestino": "Valparaiso",
-        "paisOrigen": "Argentina",
-        "paisDestino": "Chile",
-        "fechaVuelo": "2025-02-05",
-        "ciudadDestino": "Santiago"
-    },
-    {
-        "precio": 740,
-        "ubicacion": "Calle 111",
-        "puntuacion": [],
-        "ciudad": "Casablanca",
-        "desayuno": true,
-        "provincia": "Casablanca",
-        "nombre": "Casa Hotel",
-        "pais": "Marruecos"
-    },
-    {
-        "precio": 800,
-        "ubicacion": "Calle 360",
-        "puntuacion": [],
-        "ciudad": "Atenas",
-        "desayuno": true,
-        "provincia": "Atica",
-        "nombre": "Grecos Hotel",
-        "pais": "Grecia"
-    },
-    {
-        "precio": 100,
-        "provinciaOrigen": "Arequipa",
-        "ciudadOrigen": "Arequipa",
-        "provinciaDestino": "Antioquia",
-        "paisOrigen": "Peru",
-        "paisDestino": "Colombia",
-        "fechaVuelo": "2025-03-27",
-        "ciudadDestino": "Medellin"
-    },
-    {
         "tipoAsistencia": "Platino",
         "precio": 60,
         "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Santiago",
-        "medicamentos": "5000"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
+        "asistenciaMedica": "10000",
         "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Ciudad de Mexico",
-        "medicamentos": "20000"
-    },
-    {
-        "precio": 120,
-        "provinciaOrigen": "Ciudad de Mexico",
-        "ciudadOrigen": "Ciudad de Mexico",
-        "provinciaDestino": "California",
-        "paisOrigen": "Mexico",
-        "paisDestino": "Estados Unidos",
-        "fechaVuelo": "2024-12-11",
-        "ciudadDestino": "Los Angeles"
-    },
-    {
-        "precio": 160,
-        "provinciaOrigen": "Nueva Gales del Sur",
-        "ciudadOrigen": "Sidney",
-        "provinciaDestino": "Bangkok",
-        "paisOrigen": "Australia",
-        "paisDestino": "Tailandia",
-        "fechaVuelo": "2025-01-09",
-        "ciudadDestino": "Bangkok"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Atenas",
-        "medicamentos": "10000"
-    },
-    {
-        "precio": 300,
-        "ubicacion": "Calle 450",
-        "puntuacion": [],
-        "ciudad": "San Jose",
-        "desayuno": true,
-        "provincia": "San Jose",
-        "nombre": "Selva Hotel",
-        "pais": "Costa Rica"
-    },
-    {
-        "precio": 720,
-        "ubicacion": "Calle 790",
-        "puntuacion": [],
-        "ciudad": "Paris",
-        "desayuno": true,
-        "provincia": "Ile de France",
-        "nombre": "Ola la Hotel",
-        "pais": "Francia"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "1000",
-        "destino": "Auckland",
-        "medicamentos": "20000"
-    },
-    {
-        "precio": 190,
-        "ubicacion": "Calle 740",
-        "puntuacion": [],
-        "ciudad": "Tokio",
-        "desayuno": true,
-        "provincia": "Tokio",
-        "nombre": "Ponja Hotel",
-        "pais": "Japon"
-    },
-    {
-        "precio": 260,
-        "provinciaOrigen": "Renania del Norte-Westfalia",
-        "ciudadOrigen": "Dusseldorf",
-        "provinciaDestino": "Atica",
-        "paisOrigen": "Alemania",
-        "paisDestino": "Grecia",
-        "fechaVuelo": "2025-03-29",
-        "ciudadDestino": "Atenas"
-    },
-    {
-        "precio": 150,
-        "ubicacion": "Calle 123",
-        "puntuacion": [],
-        "ciudad": "Ciudad de Mexico",
-        "desayuno": true,
-        "provincia": "Ciudad de Mexico",
-        "nombre": "Ole Hotel",
-        "pais": "Mexico"
-    },
-    {
-        "precio": 400,
-        "ubicacion": "Calle 365",
-        "puntuacion": [],
-        "ciudad": "Auckland",
-        "desayuno": true,
-        "provincia": "Auckland",
-        "nombre": "Zela Hotel",
-        "pais": "Nueva Zelanda"
-    },
-    {
-        "precio": 789,
-        "ubicacion": "Calle 800",
-        "puntuacion": [],
-        "ciudad": "Bangkok",
-        "desayuno": true,
-        "provincia": "Bangkok",
-        "nombre": "Bang Hotel",
-        "pais": "Tailandia"
+        "vueloDemorado": "600",
+        "destino": "Casablanca",
+        "medicamentos": "2000"
     },
     {
         "precio": 800,
@@ -460,84 +300,14 @@
         "pais": "Italia"
     },
     {
-        "precio": 200,
-        "provinciaOrigen": "Cataluña",
-        "ciudadOrigen": "Barcelona",
-        "provinciaDestino": "Inglaterra",
-        "paisOrigen": "España",
-        "paisDestino": "Reino Unido",
-        "fechaVuelo": "2025-01-29",
-        "ciudadDestino": "Londres"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "10000",
-        "perdidaEquipaje": "1500",
-        "vueloDemorado": "600",
-        "destino": "Casablanca",
-        "medicamentos": "2000"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "900",
-        "destino": "Bangkok",
-        "medicamentos": "20000"
-    },
-    {
-        "tipoAsistencia": "Plata",
-        "precio": 80,
-        "cantDias": 0,
-        "asistenciaMedica": "40000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "500",
-        "destino": "Paris",
-        "medicamentos": "10000"
-    },
-    {
-        "tipoAsistencia": "Platino",
-        "precio": 60,
-        "cantDias": 0,
-        "asistenciaMedica": "20000",
-        "perdidaEquipaje": "1000",
-        "vueloDemorado": "400",
-        "destino": "Lima",
-        "medicamentos": "5000"
-    },
-    {
-        "precio": 459,
-        "ubicacion": "Calle 630",
-        "puntuacion": [],
-        "ciudad": "Valencia",
-        "desayuno": true,
-        "provincia": "Comunidad Valenciana",
-        "nombre": "Nuit Hotel",
-        "pais": "España"
-    },
-    {
-        "precio": 600,
-        "ubicacion": "Calle 765",
-        "puntuacion": [],
-        "ciudad": "Quito",
-        "desayuno": true,
-        "provincia": "Pichincha",
-        "nombre": "Mar Hotel",
-        "pais": "Ecuador"
-    },
-    {
-        "precio": 465,
-        "ubicacion": "Calle 320",
-        "puntuacion": [],
-        "ciudad": "Medellin",
-        "desayuno": true,
-        "provincia": "Antioquia",
-        "nombre": "Colo Hotel ",
-        "pais": "Colombia"
+        "precio": 100,
+        "provinciaOrigen": "Cordoba",
+        "ciudadOrigen": "Cordoba",
+        "provinciaDestino": "Valparaiso",
+        "paisOrigen": "Argentina",
+        "paisDestino": "Chile",
+        "fechaVuelo": "2025-02-05",
+        "ciudadDestino": "Santiago"
     },
     {
         "tipoAsistencia": "Platino",
@@ -556,8 +326,98 @@
         "asistenciaMedica": "50000",
         "perdidaEquipaje": "2000",
         "vueloDemorado": "1500",
-        "destino": "Munich",
-        "medicamentos": "40000"
+        "destino": "Madrid",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 410,
+        "ubicacion": "Calle 850",
+        "puntuacion": [],
+        "ciudad": "Madrid",
+        "desayuno": true,
+        "provincia": "Madrid",
+        "nombre": "Es Hotel",
+        "pais": "España"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Roma",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 420,
+        "ubicacion": "St 140",
+        "puntuacion": [],
+        "ciudad": "Los Angeles",
+        "desayuno": true,
+        "provincia": "California",
+        "nombre": "American Hotel",
+        "pais": "Estados Unidos"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Ciudad de Mexico",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 150,
+        "ubicacion": "Calle 123",
+        "puntuacion": [],
+        "ciudad": "Ciudad de Mexico",
+        "desayuno": true,
+        "provincia": "Ciudad de Mexico",
+        "nombre": "Ole Hotel",
+        "pais": "Mexico"
+    },
+    {
+        "precio": 100,
+        "provinciaOrigen": "Arequipa",
+        "ciudadOrigen": "Arequipa",
+        "provinciaDestino": "Antioquia",
+        "paisOrigen": "Peru",
+        "paisDestino": "Colombia",
+        "fechaVuelo": "2025-03-27",
+        "ciudadDestino": "Medellin"
+    },
+    {
+        "precio": 120,
+        "provinciaOrigen": "Ciudad de Mexico",
+        "ciudadOrigen": "Ciudad de Mexico",
+        "provinciaDestino": "California",
+        "paisOrigen": "Mexico",
+        "paisDestino": "Estados Unidos",
+        "fechaVuelo": "2024-12-11",
+        "ciudadDestino": "Los Angeles"
+    },
+    {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "400",
+        "destino": "Lima",
+        "medicamentos": "5000"
+    },
+    {
+        "precio": 160,
+        "provinciaOrigen": "Nueva Gales del Sur",
+        "ciudadOrigen": "Sidney",
+        "provinciaDestino": "Bangkok",
+        "paisOrigen": "Australia",
+        "paisDestino": "Tailandia",
+        "fechaVuelo": "2025-01-09",
+        "ciudadDestino": "Bangkok"
     },
     {
         "tipoAsistencia": "Oro",
@@ -570,14 +430,154 @@
         "medicamentos": "40000"
     },
     {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "500",
+        "destino": "Atenas",
+        "medicamentos": "10000"
+    },
+    {
+        "precio": 260,
+        "provinciaOrigen": "Renania del Norte-Westfalia",
+        "ciudadOrigen": "Dusseldorf",
+        "provinciaDestino": "Atica",
+        "paisOrigen": "Alemania",
+        "paisDestino": "Grecia",
+        "fechaVuelo": "2025-03-29",
+        "ciudadDestino": "Atenas"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1000",
+        "vueloDemorado": "900",
+        "destino": "Bangkok",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 789,
+        "ubicacion": "Calle 800",
+        "puntuacion": [],
+        "ciudad": "Bangkok",
+        "desayuno": true,
+        "provincia": "Bangkok",
+        "nombre": "Bang Hotel",
+        "pais": "Tailandia"
+    },
+    {
+        "precio": 460,
+        "ubicacion": "Calle 600",
+        "puntuacion": [],
+        "ciudad": "Munich",
+        "desayuno": true,
+        "provincia": "Baviera",
+        "nombre": "Aleman Hotel",
+        "pais": "Alemania"
+    },
+    {
+        "precio": 600,
+        "ubicacion": "Calle 765",
+        "puntuacion": [],
+        "ciudad": "Quito",
+        "desayuno": true,
+        "provincia": "Pichincha",
+        "nombre": "Mar Hotel",
+        "pais": "Ecuador"
+    },
+    {
         "tipoAsistencia": "Oro",
         "precio": 120,
         "cantDias": 0,
         "asistenciaMedica": "50000",
+        "perdidaEquipaje": "2000",
+        "vueloDemorado": "1500",
+        "destino": "Munich",
+        "medicamentos": "40000"
+    },
+    {
+        "precio": 720,
+        "ubicacion": "Calle 790",
+        "puntuacion": [],
+        "ciudad": "Paris",
+        "desayuno": true,
+        "provincia": "Ile de France",
+        "nombre": "Ola la Hotel",
+        "pais": "Francia"
+    },
+    {
+        "precio": 200,
+        "provinciaOrigen": "Cataluña",
+        "ciudadOrigen": "Barcelona",
+        "provinciaDestino": "Inglaterra",
+        "paisOrigen": "España",
+        "paisDestino": "Reino Unido",
+        "fechaVuelo": "2025-01-29",
+        "ciudadDestino": "Londres"
+    },
+    {
+        "tipoAsistencia": "Plata",
+        "precio": 80,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
         "perdidaEquipaje": "1500",
         "vueloDemorado": "1000",
-        "destino": "Medellin",
-        "medicamentos": "40000"
+        "destino": "Genova",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 800,
+        "ubicacion": "Calle 360",
+        "puntuacion": [],
+        "ciudad": "Atenas",
+        "desayuno": true,
+        "provincia": "Atica",
+        "nombre": "Grecos Hotel",
+        "pais": "Grecia"
+    },
+    {
+        "precio": 400,
+        "ubicacion": "Calle 500",
+        "puntuacion": [],
+        "ciudad": "Lima",
+        "desayuno": true,
+        "provincia": "Lima",
+        "nombre": "Peruano Hotel",
+        "pais": "Peru"
+    },
+    {
+        "tipoAsistencia": "Platino",
+        "precio": 60,
+        "cantDias": 0,
+        "asistenciaMedica": "20000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "900",
+        "destino": "Tokio",
+        "medicamentos": "10000"
+    },
+    {
+        "tipoAsistencia": "Oro",
+        "precio": 150,
+        "cantDias": 0,
+        "asistenciaMedica": "40000",
+        "perdidaEquipaje": "1500",
+        "vueloDemorado": "1000",
+        "destino": "Los Angeles",
+        "medicamentos": "20000"
+    },
+    {
+        "precio": 740,
+        "ubicacion": "Calle 111",
+        "puntuacion": [],
+        "ciudad": "Casablanca",
+        "desayuno": true,
+        "provincia": "Casablanca",
+        "nombre": "Casa Hotel",
+        "pais": "Marruecos"
     },
     {
         "precio": 100,
