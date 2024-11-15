@@ -22,11 +22,11 @@
     {
         "precio": 590,
         "ubicacion": "Cabeza de Toro",
-        "nombre": "Westin Puntacana Resort & Club",
         "puntuacion": [],
         "ciudad": "Punta Cana",
         "desayuno": true,
         "provincia": "Punta Cana",
+        "nombre": "Westin Puntacana Resort & Club",
         "pais": "Republica Dominicana"
     },
     {
@@ -102,11 +102,11 @@
     {
         "precio": 188,
         "ubicacion": "Moreno 252",
-        "nombre": "Nahuel Huapi",
         "puntuacion": [],
         "ciudad": "Bariloche",
         "desayuno": true,
         "provincia": "Rio Negro",
+        "nombre": "Nahuel Huapi",
         "pais": "Argentina"
     },
     {
@@ -122,21 +122,21 @@
     {
         "precio": 257,
         "ubicacion": "Thurn-und-Taxis-Platz 2",
-        "nombre": "Jumeirah Frankfurt",
         "puntuacion": [],
         "ciudad": "Frankfurt",
         "desayuno": true,
         "provincia": "Hanssen",
+        "nombre": "Jumeirah Frankfurt",
         "pais": "Alemania"
     },
     {
         "precio": 380,
         "ubicacion": "Gran Via 50",
-        "nombre": "Hostal Main Street Madrid",
         "puntuacion": [],
         "ciudad": "Madrid",
         "desayuno": true,
         "provincia": "Madrid",
+        "nombre": "Hostal Main Street Madrid",
         "pais": "España"
     },
     {
@@ -312,11 +312,11 @@
     {
         "precio": 347,
         "ubicacion": "Av. Nossa Senhora de Copacabana 335",
-        "nombre": "Windsor Copa Hotel",
         "puntuacion": [],
         "ciudad": "Rio de Janeiro",
         "desayuno": true,
         "provincia": "Rio de Janeiro",
+        "nombre": "Windsor Copa Hotel",
         "pais": "Brasil"
     },
     {
@@ -342,11 +342,11 @@
     {
         "precio": 367,
         "ubicacion": "South Beach",
-        "nombre": "Ocean Reef Suites",
         "puntuacion": [],
         "ciudad": "Miami",
         "desayuno": true,
         "provincia": "Florida",
+        "nombre": "Ocean Reef Suites",
         "pais": "Estados Unidos"
     },
     {
@@ -372,11 +372,11 @@
     {
         "precio": 595,
         "ubicacion": "Cerro Alarken 1",
-        "nombre": "Arakur Ushuaia Resort & Spa",
         "puntuacion": [],
         "ciudad": "Ushuaia",
         "desayuno": true,
         "provincia": "Tierra del Fuego",
+        "nombre": "Arakur Ushuaia Resort & Spa",
         "pais": "Argentina"
     },
     {
@@ -402,11 +402,11 @@
     {
         "precio": 545,
         "ubicacion": "San Jeronimo 243-257",
-        "nombre": "Azur Real Hotel Boutique",
         "puntuacion": [],
         "ciudad": "Cordoba",
         "desayuno": true,
-        "provincia": "Cordooba",
+        "provincia": "Cordoba",
+        "nombre": "Azur Real Hotel Boutique",
         "pais": "Argentina"
     },
     {
